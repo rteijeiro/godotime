@@ -1,17 +1,23 @@
 extends Control
 
 @onready var email_input = $VBoxContainer.get_node("Email")
-@onready var full_name_input = $VBoxContainer.get_node("FullName")
-@onready var phone_input = $VBoxContainer.get_node("PhoneInput")
+@onready var full_name_input = $VBoxContainer.get_node("User")
+@onready var phone_input = $VBoxContainer.get_node("Phone")
 @onready var password_input = $VBoxContainer.get_node("Password")
-@onready var register_button = $VBoxContainer.get_node("Register")
+@onready var register_button = $Button
 @onready var error_label = $VBoxContainer.get_node("ErrorLabel")
 
 
 var user_manager = UserManager.new()
 
 func _ready():
-	register_button.pressed.connect(_on_register_pressed)
+	# Depuración para ver si encuentra el botón
+	print("Nodo Register encontrado:", register_button)
+
+	if register_button:  # Evita el error si el botón es null
+		register_button.pressed.connect(_on_register_pressed)
+	else:
+		print("⚠️ ERROR: No se encontró el botón Register. Verifica su nombre y estructura en la escena.")
 
 # Función para registrar al usuario
 func _on_register_pressed():
@@ -36,7 +42,3 @@ func _on_register_pressed():
 		get_tree().change_scene_to_file("res://scenes/login.tscn")  # Redirigir a la pantalla de login
 	else:
 		error_label.text = "El correo ya está registrado"
-
-
-func _on_button_pressed() -> void:
-	register_button.pressed.connect(_on_register_pressed)

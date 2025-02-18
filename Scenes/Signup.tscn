@@ -157,5 +157,3 @@ text = "Registrarse"
 icon = ExtResource("4_vrl2p")
 flat = true
 icon_alignment = 1
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,14 @@
+{
+	"asdasdas": {
+		"full_name": "dasdadsasd",
+		"hours": "08:00 - 14:00",
+		"password": "aasdaddasd",
+		"phone": "6456456"
+	},
+	"pepe@gmail.com": {
+		"full_name": "pepe rodriguez fuentes",
+		"hours": "08:00 - 14:00",
+		"password": "pepito",
+		"phone": "123456789"
+	}
+}
