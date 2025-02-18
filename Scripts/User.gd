@@ -1,3 +1,4 @@
+# Class User
 class_name User
 
 var full_name: String
