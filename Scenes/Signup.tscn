@@ -1,6 +1,5 @@
-[gd_scene load_steps=8 format=3 uid="uid://btv5w6rx3036o"]
+[gd_scene load_steps=7 format=3 uid="uid://btv5w6rx3036o"]
 
-[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_mrs2y"]
 [ext_resource type="Texture2D" uid="uid://c83fc4s23f15g" path="res://Images/logo.png" id="2_kj2cj"]
 [ext_resource type="FontFile" uid="uid://cgctwousl1brr" path="res://Fonts/Inter/static/Inter_24pt-Black.ttf" id="3_vg34y"]
 [ext_resource type="Texture2D" uid="uid://bndd8q0c3auqy" path="res://Images/button_base.png" id="4_vrl2p"]
@@ -18,7 +17,6 @@ anchor_bottom = 1.0
 offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_mrs2y")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
