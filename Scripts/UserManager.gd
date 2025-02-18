@@ -4,43 +4,50 @@ extends Node
 
 const FILE_PATH = "res://files/users.txt"
 
-# Save user
-func save_user(user: User):
-	var file = FileAccess.open(FILE_PATH, FileAccess.READ_WRITE)
-	if file == null:
-		file = FileAccess.open(FILE_PATH, FileAccess.WRITE)
-	
-	var users = get_all_users()
-	for u in users:
-		if u.email == user.email:
-			print("Error: Usuario ya registrado")
-			return false
-
-	file.seek_end()
-	file.store_line(user.to_csv())
-	file.close()
-	return true
-
-# Get all users
-func get_all_users() -> Array:
-	var users = []
+# Cargar todos los usuarios desde el JSON
+func load_users():
 	if not FileAccess.file_exists(FILE_PATH):
-		return users
+		return {}
 	
 	var file = FileAccess.open(FILE_PATH, FileAccess.READ)
-	while not file.eof_reached():
-		var line = file.get_line()
-		if line.strip_edges() != "":
-			var user = User.from_csv(line)
-			if user:
-				users.append(user)
+	var content = file.get_as_text()
 	file.close()
-	return users
+	
+	if content.is_empty():
+		return {} 
+	
+	var data = JSON.parse_string(content)
+	return data if data is Dictionary else {} 
 
-# Look for an user
-func find_user(email: String) -> User:
-	var users = get_all_users()
-	for user in users:
-		if user.email == email:
-			return user
+# Guardar usuarios en el JSON
+func save_users(users: Dictionary):
+	var file = FileAccess.open(FILE_PATH, FileAccess.WRITE)
+	file.store_string(JSON.stringify(users, "\t"))
+	file.close()
+
+# Guardar un nuevo usuario
+func save_user(user):
+	var users = load_users()
+	
+	if user.email in users:
+		return false
+	
+	users[user.email] = {
+		"full_name": user.full_name,
+		"phone": user.phone,
+		"password": user.password,
+		"hours": user.hours
+	}
+	
+	save_users(users)
+	return true
+
+# Buscar usuario por email
+func find_user(email):
+	var users = load_users()
+	
+	if email in users:
+		var data = users[email]
+		return User.new(email, data["full_name"], data["phone"], data["password"], data["hours"])
+	
 	return null
