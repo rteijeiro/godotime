@@ -84,6 +84,7 @@ theme_override_constants/separation = 104
 [node name="User" type="LineEdit" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_2bred")
 theme_override_font_sizes/font_size = 14
 theme_override_styles/normal = SubResource("StyleBoxFlat_nhomi")
@@ -97,6 +98,7 @@ texture = ExtResource("5_ek53q")
 [node name="Password" type="LineEdit" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_placeholder_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_2bred")
 theme_override_font_sizes/font_size = 14
 theme_override_styles/normal = SubResource("StyleBoxFlat_nhomi")
