@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://6hdcab7qk7m5"]
+
+[ext_resource type="Texture2D" uid="uid://vqhavidqith8" path="res://Images/Rectangle 10.png" id="1_sl0j8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aj406"]
+texture = ExtResource("1_sl0j8")
+
+[resource]
+Label/colors/font_color = Color(0, 0, 0, 1)
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_aj406")
