@@ -32,11 +32,11 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -1.0
-offset_bottom = -1.0
+offset_top = -18.0
+offset_bottom = -18.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.00345, 0.999488)
+scale = Vector2(1.00345, 1.02011)
 color = Color(0.962376, 0.95473, 0.946968, 1)
 
 [node name="Logo" type="TextureRect" parent="."]
@@ -144,7 +144,6 @@ theme_override_fonts/font = ExtResource("3_ugm0w")
 theme_override_font_sizes/font_size = 14
 theme_override_styles/normal = SubResource("StyleBoxFlat_8lr0v")
 placeholder_text = "Contraseña"
-secret = true
 
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer/Password"]
 layout_mode = 0
