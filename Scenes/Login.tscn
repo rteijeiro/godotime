@@ -1,16 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://eo7i1hltr14e"]
+[gd_scene load_steps=8 format=3 uid="uid://byvetdy7j7b8s"]
 
-[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_326o6"]
-[ext_resource type="Texture2D" uid="uid://c83fc4s23f15g" path="res://Images/logo.png" id="3_h5nf4"]
-[ext_resource type="FontFile" uid="uid://cgctwousl1brr" path="res://Fonts/Inter/static/Inter_24pt-Black.ttf" id="3_iwa4o"]
-[ext_resource type="Texture2D" uid="uid://bndd8q0c3auqy" path="res://Images/button_base.png" id="4_c0h0s"]
-[ext_resource type="FontFile" uid="uid://34vaidepyp6q" path="res://Fonts/Inter/Inter-VariableFont_opsz,wght.ttf" id="5_c1aps"]
-[ext_resource type="FontFile" uid="uid://dal6uxhenekc3" path="res://Fonts/Inter/static/Inter_18pt-Black.ttf" id="6_o26yc"]
+[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_sibw1"]
+[ext_resource type="Texture2D" uid="uid://c83fc4s23f15g" path="res://Images/logo.png" id="2_u8b5p"]
+[ext_resource type="FontFile" uid="uid://cgctwousl1brr" path="res://Fonts/Inter/static/Inter_24pt-Black.ttf" id="3_6gwho"]
+[ext_resource type="Texture2D" uid="uid://bndd8q0c3auqy" path="res://Images/button_base.png" id="4_prpaj"]
+[ext_resource type="FontFile" uid="uid://34vaidepyp6q" path="res://Fonts/Inter/Inter-VariableFont_opsz,wght.ttf" id="5_vq6f1"]
+[ext_resource type="FontFile" uid="uid://dal6uxhenekc3" path="res://Fonts/Inter/static/Inter_18pt-Black.ttf" id="6_520iq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y453a"]
 bg_color = Color(0, 0, 0, 0)
 
-[node name="Start" type="Control"]
+[node name="Login" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,7 +18,7 @@ anchor_bottom = 1.0
 offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_326o6")
+script = ExtResource("1_sibw1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -42,7 +42,7 @@ offset_top = 26.0
 offset_right = 85.0
 offset_bottom = 196.0
 grow_horizontal = 2
-texture = ExtResource("3_h5nf4")
+texture = ExtResource("2_u8b5p")
 
 [node name="Shiftly" type="Label" parent="."]
 layout_mode = 1
@@ -58,9 +58,33 @@ offset_bottom = -155.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
-theme_override_fonts/font = ExtResource("3_iwa4o")
+theme_override_fonts/font = ExtResource("3_6gwho")
 theme_override_font_sizes/font_size = 64
 text = "Shiftly"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -148.5
+offset_top = -555.0
+offset_right = 131.5
+offset_bottom = -283.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.05201, 1.27634)
+theme_override_constants/separation = 43
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+text = "Nombre de usuario"
+
+[node name="LineEdit2" type="LineEdit" parent="VBoxContainer"]
+layout_mode = 2
+text = "Contraseña"
 
 [node name="Base" type="TextureRect" parent="."]
 layout_mode = 1
@@ -75,7 +99,7 @@ offset_right = 154.0
 offset_bottom = 321.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_c0h0s")
+texture = ExtResource("4_prpaj")
 
 [node name="Button" type="Button" parent="Base"]
 layout_mode = 0
@@ -85,43 +109,20 @@ offset_right = 113.0
 offset_bottom = 32.0
 scale = Vector2(2.73062, 2.21374)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("5_c1aps")
+theme_override_fonts/font = ExtResource("5_vq6f1")
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_y453a")
 text = "
 "
 
-[node name="Login" type="Label" parent="Base"]
+[node name="Register" type="Label" parent="Base"]
 layout_mode = 0
 offset_left = 80.0
 offset_top = 18.0
 offset_right = 232.0
 offset_bottom = 52.0
-theme_override_fonts/font = ExtResource("6_o26yc")
+theme_override_fonts/font = ExtResource("6_520iq")
 theme_override_font_sizes/font_size = 24
 text = "Iniciar sesion"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Text" type="Label" parent="."]
-layout_mode = 0
-offset_left = 46.0
-offset_top = 778.0
-offset_right = 272.0
-offset_bottom = 806.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "Aún no tienes cuenta? -"
-
-[node name="Register" type="Label" parent="Text"]
-layout_mode = 0
-offset_left = 234.0
-offset_top = 2.0
-offset_right = 330.0
-offset_bottom = 27.0
-theme_override_colors/font_color = Color(0, 0.835294, 0.776471, 0.996078)
-theme_override_fonts/font = ExtResource("5_c1aps")
-theme_override_font_sizes/font_size = 20
-text = "Regístrate"
-
-[connection signal="pressed" from="Base/Button" to="." method="_on_button_pressed"]
