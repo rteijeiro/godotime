@@ -1,9 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cg0l4qf4qbjmx"]
+[gd_scene load_steps=6 format=3 uid="uid://t03766rb7y3a"]
 
-[ext_resource type="Texture2D" uid="uid://c7pygrmyl6rcn" path="res://Images/Top_Base.png" id="1_afbaa"]
-[ext_resource type="Texture2D" uid="uid://c7di62n7ivjgr" path="res://Images/account_circle.png" id="2_jv6mw"]
-[ext_resource type="Texture2D" uid="uid://b2tottmbh5403" path="res://Images/add_home.png" id="3_of0cj"]
-[ext_resource type="Texture2D" uid="uid://csk5hmmv56yj4" path="res://Images/output.png" id="4_5imux"]
+[ext_resource type="Texture2D" path="res://Images/Top_Base.png" id="1_afbaa"]
+[ext_resource type="Texture2D" path="res://Images/account_circle.png" id="2_jv6mw"]
+[ext_resource type="Texture2D" path="res://Images/add_home.png" id="3_of0cj"]
+[ext_resource type="Texture2D" path="res://Images/output.png" id="4_5imux"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lujb3"]
 bg_color = Color(1, 1, 1, 1)
