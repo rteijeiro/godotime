@@ -1,21 +1,21 @@
-extends Node  # Asegúrate de que tu script herede de Node
+extends Node  # Make sure your script inherits from Node
 
-@onready var label = $Label  # Usamos la anotación @onready para obtener el Label cuando esté listo
+@onready var label = $Label  # We use the @onready annotation to get the Label when it's ready
 
 func _ready():
 	pass
-	# Habilitar la detección de clics en el label
+	# Enable click detection on the label
 	#label.mouse_filter = Control.MOUSE_FILTER_PASS
-	# Conectar la señal gui_input correctamente
+	# Properly connect the gui_input signal
 	#label.connect("gui_input", Callable(self, "_on_label_input"))
 	
 func _on_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Login.tscn")
 
 func _on_label_input(event):
-	# Verificamos si el evento es un clic del ratón izquierdo
+	# Check if the event is a left mouse click
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-		# Verifica si se hizo clic en el área del Label
+		# Check if the click was within the Label's area
 		if label.get_rect().has_point(event.position):
-			# Cargar la escena Signup
+			# Load the Signup scene
 			get_tree().change_scene("res://path_to_your_scene/Signup.tscn")
