@@ -75,13 +75,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -149.5
-offset_top = -567.0
-offset_right = 130.5
-offset_bottom = -295.0
+offset_left = -150.5
+offset_top = -534.0
+offset_right = 129.5
+offset_bottom = -262.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(1.05201, 1.27634)
+scale = Vector2(1.02765, 1.08516)
 theme_override_constants/separation = 43
 
 [node name="Email" type="LineEdit" parent="VBoxContainer"]
