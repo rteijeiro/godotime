@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 [gd_scene load_steps=8 format=3 uid="uid://btv5w6rx3036o"]
+=======
+[gd_scene load_steps=11 format=3 uid="uid://btv5w6rx3036o"]
+>>>>>>> 77c0b17e62bbb7638fdbded497f6cb2466d91a72
 
+[ext_resource type="Script" path="res://Scripts/Signup.gd" id="1_ra024"]
 [ext_resource type="Texture2D" uid="uid://c83fc4s23f15g" path="res://Images/logo.png" id="2_kj2cj"]
 [ext_resource type="FontFile" uid="uid://bwgc064v3ckw3" path="res://Fonts/Inter/static/Inter_18pt-Light.ttf" id="3_ugm0w"]
 [ext_resource type="FontFile" uid="uid://cgctwousl1brr" path="res://Fonts/Inter/static/Inter_24pt-Black.ttf" id="3_vg34y"]
@@ -20,6 +25,7 @@ anchor_bottom = 1.0
 offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ra024")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -163,3 +169,5 @@ text = "Registrarse"
 icon = ExtResource("4_vrl2p")
 flat = true
 icon_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
