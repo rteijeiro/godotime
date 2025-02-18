@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://tuolo83dvr1b"]
+[gd_scene load_steps=5 format=3 uid="uid://tuolo83dvr1b"]
 
-[ext_resource type="Texture2D" uid="uid://bndd8q0c3auqy" path="res://Images/button_base.png" id="2_emqk4"]
+[ext_resource type="Texture2D" uid="uid://bndd8q0c3auqy" path="res://Images/button_base.png" id="1_badsc"]
+[ext_resource type="FontFile" uid="uid://dal6uxhenekc3" path="res://Fonts/Inter/static/Inter_18pt-Black.ttf" id="1_yt3s2"]
+[ext_resource type="FontFile" uid="uid://bwgc064v3ckw3" path="res://Fonts/Inter/static/Inter_18pt-Light.ttf" id="2_jy6fl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3rl84"]
+bg_color = Color(1, 1, 1, 1)
 
 [node name="Logout" type="Control"]
 layout_mode = 3
@@ -17,14 +22,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -130.0
-offset_top = -68.0
-offset_right = 133.0
-offset_bottom = 71.0
+offset_left = -186.5
+offset_top = -97.5
+offset_right = 189.5
+offset_bottom = 100.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_3rl84")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+self_modulate = Color(0.964742, 0.964742, 0.964742, 1)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -37,33 +44,36 @@ theme_override_constants/margin_bottom = 10
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_constants/separation = 14
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Message" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "¡Hemos acabado por hoy!"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_yt3s2")
+theme_override_font_sizes/font_size = 16
+text = "
+¡Hemos acabado por hoy!"
 horizontal_alignment = 1
 
-[node name="Label2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Text" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 13
-text = "Descansa para volver"
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_jy6fl")
+theme_override_font_sizes/font_size = 14
+text = "Descansa para volver 
+mañana a por otro gran
+día
+"
 horizontal_alignment = 1
 
-[node name="Label3" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+[node name="Exit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 13
-text = "mañana a por otro gran"
-horizontal_alignment = 1
-
-[node name="Label4" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 13
-text = "dia"
-horizontal_alignment = 1
-
-[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("1_yt3s2")
+theme_override_font_sizes/font_size = 11
 text = "Cerrar sesion"
-icon = ExtResource("2_emqk4")
+icon = ExtResource("1_badsc")
 flat = true
 icon_alignment = 1

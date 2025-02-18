@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cab66ph13le1a"]
 
-[ext_resource type="Texture2D" uid="uid://dswii6u1jodo" path="res://Images/Line 1.png" id="1_gsl02"]
+[ext_resource type="Texture2D" uid="uid://dswii6u1jodo" path="res://Images/Line 1.png" id="1_unrtc"]
 
 [node name="Profile" type="Control"]
 layout_mode = 3
@@ -39,7 +39,7 @@ horizontal_alignment = 1
 
 [node name="Label5" type="TextureRect" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_gsl02")
+texture = ExtResource("1_unrtc")
 
 [node name="Label2" type="Label" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -48,7 +48,7 @@ horizontal_alignment = 1
 
 [node name="Label6" type="TextureRect" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_gsl02")
+texture = ExtResource("1_unrtc")
 
 [node name="Label3" type="Label" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -57,7 +57,7 @@ horizontal_alignment = 1
 
 [node name="Label7" type="TextureRect" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_gsl02")
+texture = ExtResource("1_unrtc")
 
 [node name="Label4" type="Label" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -80,7 +80,7 @@ horizontal_alignment = 1
 
 [node name="Label2" type="TextureRect" parent="VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_gsl02")
+texture = ExtResource("1_unrtc")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer"]
 layout_mode = 2

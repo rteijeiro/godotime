@@ -1,11 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://btv5w6rx3036o"]
+[gd_scene load_steps=10 format=3 uid="uid://btv5w6rx3036o"]
 
 [ext_resource type="Texture2D" uid="uid://c83fc4s23f15g" path="res://Images/logo.png" id="2_kj2cj"]
 [ext_resource type="FontFile" uid="uid://bwgc064v3ckw3" path="res://Fonts/Inter/static/Inter_18pt-Light.ttf" id="3_ugm0w"]
 [ext_resource type="FontFile" uid="uid://cgctwousl1brr" path="res://Fonts/Inter/static/Inter_24pt-Black.ttf" id="3_vg34y"]
 [ext_resource type="Texture2D" uid="uid://bndd8q0c3auqy" path="res://Images/button_base.png" id="4_vrl2p"]
 [ext_resource type="Texture2D" uid="uid://dswii6u1jodo" path="res://Images/Line 1.png" id="4_w7ivi"]
-[ext_resource type="FontFile" uid="uid://34vaidepyp6q" path="res://Fonts/Inter/Inter-VariableFont_opsz,wght.ttf" id="5_lsik2"]
 [ext_resource type="FontFile" uid="uid://4jdr3vvkxcbp" path="res://Fonts/Inter/static/Inter_18pt-Bold.ttf" id="6_f2f6m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8lr0v"]
@@ -140,43 +139,18 @@ position = Vector2(148.025, 24.2387)
 scale = Vector2(1, 1.3)
 texture = ExtResource("4_w7ivi")
 
-[node name="Base" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -154.0
-offset_top = 251.0
-offset_right = 154.0
-offset_bottom = 321.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("4_vrl2p")
-
-[node name="Button" type="Button" parent="Base"]
+[node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 1.0
-offset_right = 113.0
-offset_bottom = 32.0
-scale = Vector2(2.73062, 2.21374)
+offset_left = 54.5
+offset_top = 700.0
+offset_right = 366.5
+offset_bottom = 770.0
+scale = Vector2(0.994372, 0.870738)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("5_lsik2")
-theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxFlat_y453a")
-text = "
-"
-
-[node name="Register" type="Label" parent="Base"]
-layout_mode = 0
-offset_left = 80.0
-offset_top = 18.0
-offset_right = 232.0
-offset_bottom = 52.0
 theme_override_fonts/font = ExtResource("6_f2f6m")
 theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_y453a")
 text = "Registrarse"
-horizontal_alignment = 1
-vertical_alignment = 1
+icon = ExtResource("4_vrl2p")
+flat = true
+icon_alignment = 1
