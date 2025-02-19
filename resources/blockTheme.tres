@@ -1,7 +1,0 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://pa7a5olww6a1"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lcfdu"]
-
-[resource]
-Label/colors/font_color = Color(0, 0, 0, 1)
-Label/styles/normal = SubResource("StyleBoxFlat_lcfdu")
