@@ -1,0 +1,13 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://cc138rf4qu816"]
+
+[ext_resource type="Texture2D" uid="uid://bndd8q0c3auqy" path="res://Images/button_base.png" id="1_sor28"]
+[ext_resource type="Texture2D" uid="uid://vqhavidqith8" path="res://Images/Rectangle 10.png" id="1_sx7qg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_agkb8"]
+texture = ExtResource("1_sx7qg")
+
+[resource]
+Button/constants/icon_max_width = 150
+Button/icons/icon = ExtResource("1_sor28")
+Label/colors/font_color = Color(0, 0, 0, 1)
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_agkb8")
