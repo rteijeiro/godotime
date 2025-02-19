@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dtk0cce46is38" path="res://Images/account_circle.png" id="2_xps4i"]
 [ext_resource type="Texture2D" uid="uid://cqvqqrtj7p7io" path="res://Images/add_home.png" id="3_72p7h"]
 [ext_resource type="Texture2D" uid="uid://c6r2xhwl5uqxj" path="res://Images/output.png" id="4_08n8a"]
-[ext_resource type="Theme" uid="uid://cc138rf4qu816" path="res://resources/customTheme.tres" id="5_akp77"]
+[ext_resource type="Theme" uid="uid://rbka8ln1mf75" path="res://resources/defaultTheme.tres" id="5_akp77"]
 [ext_resource type="Theme" uid="uid://mbjxja2oisw3" path="res://resources/greenTheme.tres" id="6_8ioup"]
 [ext_resource type="Theme" uid="uid://pa7a5olww6a1" path="res://resources/blockTheme.tres" id="7_jt5ro"]
 
