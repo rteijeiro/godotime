@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://tuolo83dvr1b"]
+[gd_scene load_steps=5 format=3 uid="uid://tuolo83dvr1b"]
 
 [ext_resource type="Theme" uid="uid://cc138rf4qu816" path="res://resources/customTheme.tres" id="1_dytow"]
 [ext_resource type="FontFile" uid="uid://dal6uxhenekc3" path="res://Fonts/Inter/static/Inter_18pt-Black.ttf" id="1_yt3s2"]
 [ext_resource type="FontFile" uid="uid://bwgc064v3ckw3" path="res://Fonts/Inter/static/Inter_18pt-Light.ttf" id="2_jy6fl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8nl86"]
+bg_color = Color(1, 1, 1, 1)
 
 [node name="Logout" type="Control"]
 layout_mode = 3
@@ -26,6 +29,7 @@ offset_bottom = 101.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_dytow")
+theme_override_styles/panel = SubResource("StyleBoxFlat_8nl86")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 self_modulate = Color(0.964742, 0.964742, 0.964742, 1)

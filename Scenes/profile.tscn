@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://cab66ph13le1a"]
+[gd_scene load_steps=10 format=3 uid="uid://cab66ph13le1a"]
 
 [ext_resource type="Texture2D" uid="uid://dgt146hw0hx73" path="res://Images/top_home.png" id="1_3a885"]
+[ext_resource type="Texture2D" uid="uid://cw22h7mu55mvv" path="res://Images/logo_account.png" id="2_lrano"]
 [ext_resource type="Texture2D" uid="uid://dtk0cce46is38" path="res://Images/account_circle.png" id="2_xps4i"]
 [ext_resource type="Texture2D" uid="uid://cqvqqrtj7p7io" path="res://Images/add_home.png" id="3_72p7h"]
 [ext_resource type="Texture2D" uid="uid://c6r2xhwl5uqxj" path="res://Images/output.png" id="4_08n8a"]
@@ -48,7 +49,7 @@ offset_top = 21.0
 offset_right = 70.0
 offset_bottom = 160.0
 grow_horizontal = 2
-texture = ExtResource("2_xps4i")
+texture = ExtResource("2_lrano")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
