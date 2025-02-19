@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://tuolo83dvr1b"]
 
-[ext_resource type="Theme" uid="uid://rbka8ln1mf75" path="res://resources/defaultTheme.tres" id="1_dytow"]
+[ext_resource type="Theme" uid="uid://cdnwriqceskov" path="res://resources/defaultTheme.tres" id="1_dytow"]
 [ext_resource type="FontFile" uid="uid://dal6uxhenekc3" path="res://Fonts/Inter/static/Inter_18pt-Black.ttf" id="1_yt3s2"]
 [ext_resource type="FontFile" uid="uid://bwgc064v3ckw3" path="res://Fonts/Inter/static/Inter_18pt-Light.ttf" id="2_jy6fl"]
 
