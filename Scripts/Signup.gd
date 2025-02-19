@@ -2,9 +2,9 @@ extends Control
 
 @onready var email_input = $VBoxContainer.get_node("Email")
 @onready var full_name_input = $VBoxContainer.get_node("User")
-@onready var phone_input = $VBoxContainer.get_node("Phone")
+@onready var phone_input = $VBoxContainer.get_node("Telephone")
 @onready var password_input = $VBoxContainer.get_node("Password")
-@onready var register_button = $Button
+@onready var register_button = $Login
 @onready var error_label = $VBoxContainer.get_node("ErrorLabel")
 
 

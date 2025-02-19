@@ -5,6 +5,12 @@
 		"password": "aasdaddasd",
 		"phone": "6456456"
 	},
+	"correo1@gmail.com": {
+		"full_name": "antonio",
+		"hours": "08:00 - 14:00",
+		"password": "contraseña",
+		"phone": "456123789"
+	},
 	"pepe@gmail.com": {
 		"full_name": "pepe rodriguez fuentes",
 		"hours": "08:00 - 14:00",
