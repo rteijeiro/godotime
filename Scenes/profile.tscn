@@ -162,7 +162,7 @@ offset_top = -4.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Label4" type="Label" parent="PanelContainer1/MarginContainer/VBoxContainer"]
+[node name="Number" type="Label" parent="PanelContainer1/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("5_akp77")
 text = "9887412335"
@@ -187,13 +187,13 @@ theme_override_constants/margin_bottom = 15
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Label" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer"]
+[node name="Text" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("5_akp77")
 text = "Establecer mi jornada laboral"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="PanelContainer2/MarginContainer/VBoxContainer/Label"]
+[node name="HSeparator" type="HSeparator" parent="PanelContainer2/MarginContainer/VBoxContainer/Text"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -208,37 +208,37 @@ layout_mode = 2
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Label" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="De" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("6_8ioup")
 text = "DE"
 
-[node name="Label2" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="8" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("7_jt5ro")
 text = "8"
 
-[node name="Label3" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="15" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("7_jt5ro")
 text = "15"
 
-[node name="Label4" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="Hasta" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("6_8ioup")
 text = "HASTA"
 
-[node name="Label5" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="14" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("7_jt5ro")
 text = "14"
 
-[node name="Label6" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="16" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("7_jt5ro")
 text = "15"
 
-[node name="Button" type="Button" parent="PanelContainer2/MarginContainer/VBoxContainer"]
+[node name="Accept" type="Button" parent="PanelContainer2/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("5_akp77")
 text = "Aceptar"

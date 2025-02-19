@@ -105,7 +105,7 @@ theme_override_fonts/font = ExtResource("5_c1aps")
 theme_override_font_sizes/font_size = 20
 text = "Regístrate"
 
-[node name="Button2" type="Button" parent="Login/Text"]
+[node name="Sing In" type="Button" parent="Login/Text"]
 layout_mode = 0
 offset_left = 233.0
 offset_top = 3.99994
@@ -120,4 +120,4 @@ text = "
 "
 
 [connection signal="pressed" from="Login" to="." method="_on_login_pressed"]
-[connection signal="pressed" from="Login/Text/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Login/Text/Sing In" to="." method="_on_button_2_pressed"]
