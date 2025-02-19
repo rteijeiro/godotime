@@ -16,5 +16,11 @@
 		"hours": "08:00 - 14:00",
 		"password": "pepito",
 		"phone": "123456789"
+	},
+	"santi@gmail.com": {
+		"full_name": "santi sainz saez",
+		"hours": "08:00 - 14:00",
+		"password": "santi",
+		"phone": "456789123"
 	}
 }
