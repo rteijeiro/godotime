@@ -1,33 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-[gd_scene load_steps=8 format=3 uid="uid://cab66ph13le1a"]
-=======
 [gd_scene load_steps=11 format=3 uid="uid://cab66ph13le1a"]
->>>>>>> 98b1e446d6bf42234949d39485ed2c884648631b
-=======
-[gd_scene load_steps=10 format=3 uid="uid://cab66ph13le1a"]
->>>>>>> parent of c757e01 (2 botones de menu interactivos)
 
+[ext_resource type="Script" path="res://Scripts/profile.gd" id="1_0owv6"]
 [ext_resource type="Texture2D" uid="uid://dgt146hw0hx73" path="res://Images/top_home.png" id="1_3a885"]
 [ext_resource type="Texture2D" uid="uid://cw22h7mu55mvv" path="res://Images/logo_account.png" id="2_lrano"]
 [ext_resource type="Texture2D" uid="uid://dtk0cce46is38" path="res://Images/account_circle.png" id="2_xps4i"]
 [ext_resource type="Texture2D" uid="uid://cqvqqrtj7p7io" path="res://Images/add_home.png" id="3_72p7h"]
 [ext_resource type="Texture2D" uid="uid://c6r2xhwl5uqxj" path="res://Images/output.png" id="4_08n8a"]
-<<<<<<< HEAD
-<<<<<<< HEAD
-[ext_resource type="Theme" uid="uid://cdnwriqceskov" path="res://resources/defaultTheme.tres" id="5_akp77"]
-=======
-<<<<<<< HEAD
-[ext_resource type="Theme" uid="uid://rbka8ln1mf75" path="res://resources/defaultTheme.tres" id="5_akp77"]
-=======
 [ext_resource type="Theme" uid="uid://cqppled3h7rd2" path="res://resources/defaultTheme.tres" id="5_akp77"]
->>>>>>> b79874e5d32c28fc1dbaf40b8d6ffb7e24607d11
-=======
-[ext_resource type="Theme" uid="uid://rbka8ln1mf75" path="res://resources/defaultTheme.tres" id="5_akp77"]
->>>>>>> parent of c757e01 (2 botones de menu interactivos)
 [ext_resource type="Theme" uid="uid://mbjxja2oisw3" path="res://resources/greenTheme.tres" id="6_8ioup"]
 [ext_resource type="Theme" uid="uid://pa7a5olww6a1" path="res://resources/blockTheme.tres" id="7_jt5ro"]
->>>>>>> 98b1e446d6bf42234949d39485ed2c884648631b
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wkjxg"]
 bg_color = Color(1, 1, 1, 1)
@@ -39,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_0owv6")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -223,9 +205,47 @@ offset_top = -4.0
 grow_horizontal = 2
 grow_vertical = 0
 
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="De" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("6_8ioup")
+text = "DE"
+
+[node name="8" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_jt5ro")
+text = "8"
+
+[node name="15" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_jt5ro")
+text = "15"
+
+[node name="Hasta" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("6_8ioup")
+text = "HASTA"
+
+[node name="14" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_jt5ro")
+text = "14"
+
+[node name="16" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("7_jt5ro")
+text = "15"
+
 [node name="Accept" type="Button" parent="PanelContainer2/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("5_akp77")
 text = "Aceptar"
 flat = true
 icon_alignment = 1
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Account" to="." method="_on_account_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Home" to="." method="_on_home_pressed"]

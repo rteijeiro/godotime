@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-[gd_scene load_steps=12 format=3 uid="uid://cua0g2j23nohu"]
-=======
 [gd_scene load_steps=13 format=3 uid="uid://cs7iafkhed4pt"]
->>>>>>> b79874e5d32c28fc1dbaf40b8d6ffb7e24607d11
-=======
-[gd_scene load_steps=12 format=3 uid="uid://cs7iafkhed4pt"]
->>>>>>> parent of c757e01 (2 botones de menu interactivos)
 
 [ext_resource type="Texture2D" uid="uid://dgt146hw0hx73" path="res://Images/top_home.png" id="1_82umt"]
+[ext_resource type="Script" path="res://Scripts/home.gd" id="1_qvn61"]
 [ext_resource type="Texture2D" uid="uid://cw6nllypx46it" path="res://Images/logo_white.png" id="2_sutsk"]
 [ext_resource type="Texture2D" uid="uid://dtk0cce46is38" path="res://Images/account_circle.png" id="2_yrt7p"]
 [ext_resource type="FontFile" uid="uid://dal6uxhenekc3" path="res://Fonts/Inter/static/Inter_18pt-Black.ttf" id="3_d6q8c"]
@@ -18,9 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://ckqsahj308dk1" path="res://Images/blue_button.png" id="8_seqx8"]
 [ext_resource type="Texture2D" uid="uid://cap57alllf614" path="res://Images/green_button.png" id="9_11xua"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lujb3"]
-bg_color = Color(1, 1, 1, 1)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvucd"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 10
@@ -28,7 +18,10 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[node name="Base" type="Control"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2rc41"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="Home" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,6 +29,7 @@ anchor_bottom = 1.0
 offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qvn61")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -76,46 +70,6 @@ theme_override_font_sizes/font_size = 16
 text = "Antonio Jesús Sanchez Rosales"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="PanelContainer" type="PanelContainer" parent="."]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -43.9999
-offset_bottom = -0.999939
-grow_horizontal = 2
-grow_vertical = 0
-scale = Vector2(0.996333, 0.991546)
-theme_override_styles/panel = SubResource("StyleBoxFlat_lujb3")
-
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer"]
-layout_mode = 2
-
-[node name="Account" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
-icon = ExtResource("2_yrt7p")
-flat = true
-
-[node name="Home" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
-icon = ExtResource("3_k5ib8")
-flat = true
-icon_alignment = 2
-
-[node name="Output" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 6
-size_flags_vertical = 4
-icon = ExtResource("4_nxlr7")
-flat = true
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
@@ -188,3 +142,48 @@ text = "8:00 hours
 icon = ExtResource("9_11xua")
 flat = true
 icon_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00121065
+anchor_top = 0.917411
+anchor_right = 0.995131
+anchor_bottom = 0.999302
+offset_right = 1.5108
+offset_bottom = 0.62561
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.996333, 0.991546)
+theme_override_styles/panel = SubResource("StyleBoxFlat_2rc41")
+metadata/_edit_use_anchors_ = true
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Account" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+icon = ExtResource("2_yrt7p")
+flat = true
+
+[node name="Home" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+icon = ExtResource("3_k5ib8")
+flat = true
+icon_alignment = 2
+
+[node name="Output" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+icon = ExtResource("4_nxlr7")
+flat = true
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Account" to="." method="_on_account_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Home" to="." method="_on_home_pressed"]
