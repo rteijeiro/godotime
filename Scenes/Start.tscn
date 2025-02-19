@@ -1,0 +1,123 @@
+[gd_scene load_steps=8 format=3 uid="uid://eo7i1hltr14e"]
+
+[ext_resource type="Script" path="res://Scripts/Start.gd" id="1_326o6"]
+[ext_resource type="Texture2D" uid="uid://c83fc4s23f15g" path="res://Images/logo.png" id="3_h5nf4"]
+[ext_resource type="FontFile" uid="uid://cgctwousl1brr" path="res://Fonts/Inter/static/Inter_24pt-Black.ttf" id="3_iwa4o"]
+[ext_resource type="FontFile" uid="uid://4jdr3vvkxcbp" path="res://Fonts/Inter/static/Inter_18pt-Bold.ttf" id="4_2iibs"]
+[ext_resource type="Texture2D" uid="uid://bndd8q0c3auqy" path="res://Images/button_base.png" id="4_c0h0s"]
+[ext_resource type="FontFile" uid="uid://34vaidepyp6q" path="res://Fonts/Inter/Inter-VariableFont_opsz,wght.ttf" id="5_c1aps"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y453a"]
+bg_color = Color(0, 0, 0, 0)
+
+[node name="Start" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_326o6")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.00345, 1.02011)
+color = Color(0.962376, 0.95473, 0.946968, 1)
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -85.0
+offset_top = 26.0
+offset_right = 85.0
+offset_bottom = 196.0
+grow_horizontal = 2
+texture = ExtResource("3_h5nf4")
+
+[node name="Shiftly" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -105.5
+offset_top = -233.0
+offset_right = 105.5
+offset_bottom = -155.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
+theme_override_fonts/font = ExtResource("3_iwa4o")
+theme_override_font_sizes/font_size = 64
+text = "Shiftly"
+
+[node name="Login" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -154.0
+offset_top = 259.0
+offset_right = 154.0
+offset_bottom = 329.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.974241, 1.03579)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_2iibs")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_y453a")
+text = "Iniciar Sesion
+"
+icon = ExtResource("4_c0h0s")
+flat = true
+icon_alignment = 1
+
+[node name="Text" type="Label" parent="Login"]
+layout_mode = 0
+offset_left = -8.72474
+offset_top = 74.5607
+offset_right = 217.275
+offset_bottom = 102.561
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+text = "Aún no tienes cuenta? -"
+
+[node name="Register" type="Label" parent="Login/Text"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 2.0
+offset_right = 330.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0, 0.835294, 0.776471, 0.996078)
+theme_override_fonts/font = ExtResource("5_c1aps")
+theme_override_font_sizes/font_size = 20
+text = "Regístrate"
+
+[node name="Sing In" type="Button" parent="Login/Text"]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 3.99994
+offset_right = 344.0
+offset_bottom = 34.9999
+scale = Vector2(0.905531, 0.731296)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("5_c1aps")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_y453a")
+text = "
+"
+
+[connection signal="pressed" from="Login" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="Login/Text/Sing In" to="." method="_on_button_2_pressed"]

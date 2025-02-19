@@ -1,0 +1,26 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://cdnwriqceskov"]
+=======
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://cqppled3h7rd2"]
+>>>>>>> b79874e5d32c28fc1dbaf40b8d6ffb7e24607d11
+=======
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://rbka8ln1mf75"]
+>>>>>>> parent of c757e01 (2 botones de menu interactivos)
+
+[ext_resource type="Texture2D" uid="uid://bndd8q0c3auqy" path="res://Images/button_base.png" id="1_28qs3"]
+[ext_resource type="FontFile" uid="uid://dal6uxhenekc3" path="res://Fonts/Inter/static/Inter_18pt-Black.ttf" id="2_n0ofc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n8b68"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[resource]
+Button/constants/icon_max_width = 150
+Button/icons/icon = ExtResource("1_28qs3")
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/fonts/font = ExtResource("2_n0ofc")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_n8b68")
