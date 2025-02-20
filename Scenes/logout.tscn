@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://tuolo83dvr1b"]
+[gd_scene load_steps=5 format=3 uid="uid://tuolo83dvr1b"]
 
 [ext_resource type="Theme" uid="uid://cqppled3h7rd2" path="res://resources/defaultTheme.tres" id="1_dytow"]
+[ext_resource type="Script" path="res://Scripts/logout.gd" id="1_fwnvx"]
 [ext_resource type="FontFile" uid="uid://dal6uxhenekc3" path="res://Fonts/Inter/static/Inter_18pt-Black.ttf" id="1_yt3s2"]
 [ext_resource type="FontFile" uid="uid://bwgc064v3ckw3" path="res://Fonts/Inter/static/Inter_18pt-Light.ttf" id="2_jy6fl"]
 
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fwnvx")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -74,3 +76,5 @@ theme_override_font_sizes/font_size = 11
 text = "Cerrar sesion"
 flat = true
 icon_alignment = 1
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Exit" to="." method="_on_exit_pressed"]

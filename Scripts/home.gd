@@ -18,3 +18,11 @@ func _on_account_pressed() -> void:
 
 func _on_home_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Home.tscn")
+
+
+func _on_finish_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/logout.tscn")
+
+
+func _on_output_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/logout.tscn")

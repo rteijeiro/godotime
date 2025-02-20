@@ -226,6 +226,8 @@ grow_vertical = 0
 
 [node name="Accept" type="Button" parent="PanelContainer2/MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme = ExtResource("5_akp77")
 text = "Aceptar"
 flat = true
@@ -233,3 +235,5 @@ icon_alignment = 1
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Account" to="." method="_on_account_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Output" to="." method="_on_output_pressed"]
+[connection signal="pressed" from="PanelContainer2/MarginContainer/VBoxContainer/Accept" to="." method="_on_accept_pressed"]
