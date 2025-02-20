@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cs7iafkhed4pt"]
+[gd_scene load_steps=17 format=3 uid="uid://cs7iafkhed4pt"]
 
 [ext_resource type="Script" path="res://Scripts/home.gd" id="1_8q3f2"]
 [ext_resource type="Texture2D" uid="uid://dgt146hw0hx73" path="res://Images/top_home.png" id="2_wkk61"]
@@ -8,7 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://ckqsahj308dk1" path="res://Images/blue_button.png" id="6_iy4d0"]
 [ext_resource type="Texture2D" uid="uid://cap57alllf614" path="res://Images/green_button.png" id="7_l7cyg"]
 [ext_resource type="Theme" uid="uid://cqppled3h7rd2" path="res://resources/defaultTheme.tres" id="8_4xr2r"]
-[ext_resource type="Theme" uid="uid://b5ktca77ekcjk" path="res://buttonPause.tres" id="9_nw6n7"]
+[ext_resource type="Texture2D" uid="uid://bud16l8aafdmu" path="res://Images/circular-determinateprogressindicator.png" id="8_vvm3o"]
+[ext_resource type="Theme" uid="uid://b5ktca77ekcjk" path="res://resources/buttonPause.tres" id="9_nw6n7"]
 [ext_resource type="Texture2D" uid="uid://bmjpqcvuf85p4" path="res://Images/pause.png" id="10_pjrwj"]
 [ext_resource type="Texture2D" uid="uid://dtk0cce46is38" path="res://Images/account_circle.png" id="11_xqe6v"]
 [ext_resource type="Texture2D" uid="uid://cqvqqrtj7p7io" path="res://Images/add_home.png" id="12_lofsu"]
@@ -152,6 +153,7 @@ offset_left = 92.0
 offset_top = 382.0
 offset_right = 322.0
 offset_bottom = 612.0
+texture = ExtResource("8_vvm3o")
 
 [node name="PanelContainer1" type="PanelContainer" parent="."]
 layout_mode = 1

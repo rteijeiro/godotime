@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkhwtulxn6qbq"
-path="res://.godot/imported/circular-determinate progress indicator.png-a6724a33a55954d1a908943a7504fc15.ctex"
+uid="uid://bud16l8aafdmu"
+path="res://.godot/imported/circular-determinateprogressindicator.png-66b8dd9e5721de194e2450f9fe624fae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Images/circular-determinate progress indicator.png"
-dest_files=["res://.godot/imported/circular-determinate progress indicator.png-a6724a33a55954d1a908943a7504fc15.ctex"]
+source_file="res://Images/circular-determinateprogressindicator.png"
+dest_files=["res://.godot/imported/circular-determinateprogressindicator.png-66b8dd9e5721de194e2450f9fe624fae.ctex"]
 
 [params]
 
