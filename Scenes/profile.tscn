@@ -211,6 +211,9 @@ theme_override_constants/separation = 20
 [node name="Text" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("5_akp77")
+theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
+theme_override_fonts/font = ExtResource("8_jl6oe")
+theme_override_font_sizes/font_size = 14
 text = "Establecer mi jornada laboral"
 horizontal_alignment = 1
 
@@ -229,6 +232,9 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("5_akp77")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("8_jl6oe")
+theme_override_font_sizes/font_size = 14
 text = "Aceptar"
 flat = true
 icon_alignment = 1
