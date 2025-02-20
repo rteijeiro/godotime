@@ -66,7 +66,7 @@ theme_override_fonts/font = ExtResource("3_3g01s")
 theme_override_font_sizes/font_size = 64
 text = "Shiftly"
 
-[node name="User" type="LineEdit" parent="."]
+[node name="Email" type="LineEdit" parent="."]
 layout_mode = 2
 offset_left = 57.0
 offset_top = 560.0
@@ -80,7 +80,7 @@ theme_override_font_sizes/font_size = 14
 theme_override_styles/normal = SubResource("StyleBoxFlat_8lr0v")
 placeholder_text = "Correo electrónico"
 
-[node name="Separator_user" type="HSeparator" parent="User"]
+[node name="Separator_email" type="HSeparator" parent="Email"]
 layout_mode = 0
 offset_top = 23.0
 offset_right = 40.0

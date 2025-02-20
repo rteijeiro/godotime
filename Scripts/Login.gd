@@ -1,7 +1,7 @@
 extends Control
 
-@onready var email_input = $VBoxContainer.get_node("User")
-@onready var password_input = $VBoxContainer.get_node("Password")
+@onready var email_input = $Email.get_node("User")
+@onready var password_input = $Password.get_node("Password")
 @onready var login_button = $Login
 @onready var error_label = $VBoxContainer.get_node("ErrorLabel")
 
