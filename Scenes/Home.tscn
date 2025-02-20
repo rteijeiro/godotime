@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cs7iafkhed4pt"]
+[gd_scene load_steps=14 format=3 uid="uid://cs7iafkhed4pt"]
 
 [ext_resource type="Texture2D" uid="uid://dgt146hw0hx73" path="res://Images/top_home.png" id="1_82umt"]
 [ext_resource type="Script" path="res://Scripts/home.gd" id="1_qvn61"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cqvqqrtj7p7io" path="res://Images/add_home.png" id="3_k5ib8"]
 [ext_resource type="Texture2D" uid="uid://c6r2xhwl5uqxj" path="res://Images/output.png" id="4_nxlr7"]
 [ext_resource type="FontFile" uid="uid://pape1wgjnach" path="res://Fonts/Inter/static/Inter_24pt-Medium.ttf" id="7_bhwor"]
+[ext_resource type="Theme" uid="uid://cqppled3h7rd2" path="res://resources/defaultTheme.tres" id="8_3acw3"]
 [ext_resource type="Texture2D" uid="uid://ckqsahj308dk1" path="res://Images/blue_button.png" id="8_seqx8"]
 [ext_resource type="Texture2D" uid="uid://cap57alllf614" path="res://Images/green_button.png" id="9_11xua"]
 
@@ -73,9 +74,9 @@ vertical_alignment = 1
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 10.0
+offset_left = 12.0
 offset_top = 212.0
-offset_right = 398.0
+offset_right = 400.0
 offset_bottom = 362.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_pvucd")
 
@@ -140,6 +141,46 @@ theme_override_font_sizes/font_size = 16
 text = "8:00 hours
 "
 icon = ExtResource("9_11xua")
+flat = true
+icon_alignment = 1
+
+[node name="PanelContainer1" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -31.0
+offset_right = 170.0
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("8_3acw3")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer1"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer1/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer1/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Start" type="Button" parent="PanelContainer1/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Comenzar"
+flat = true
+icon_alignment = 1
+
+[node name="Finish" type="Button" parent="PanelContainer1/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Terminar"
 flat = true
 icon_alignment = 1
 
