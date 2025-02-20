@@ -212,3 +212,4 @@ icon_alignment = 1
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Account" to="." method="_on_account_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="PanelContainer2/MarginContainer/VBoxContainer/Accept" to="." method="_on_accept_pressed"]

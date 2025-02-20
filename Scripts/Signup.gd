@@ -39,6 +39,6 @@ func _on_register_pressed():
 	
 	if success:
 		print("Usuario registrado con éxito")
-		get_tree().change_scene_to_file("res://scenes/login.tscn")  # Redirigir a la pantalla de login
+		get_tree().change_scene_to_file("res://Scenes/Login.tscn")  # Redirigir a la pantalla de login
 	else:
 		error_label.text = "El correo ya está registrado"
