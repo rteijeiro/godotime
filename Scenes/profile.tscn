@@ -137,6 +137,7 @@ grow_vertical = 0
 [node name="Surname" type="Label" parent="PanelContainer1/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("5_akp77")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Sánchez Rosales"
 horizontal_alignment = 1
 
