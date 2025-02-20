@@ -9,6 +9,7 @@ func register(email, full_name, phone, password):
 	var success = user_manager.save_user(new_user)
 	if success:
 		print("Registro exitoso")
+		current_user = new_user
 		return true
 	else:
 		print("Error al registrar")

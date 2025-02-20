@@ -9,6 +9,7 @@ extends Control
 
 
 var user_manager = UserManager.new()
+var full_name: String
 
 func _ready():
 	# Depuración para ver si encuentra el botón
@@ -22,7 +23,7 @@ func _ready():
 # Función para registrar al usuario
 func _on_register_pressed():
 	var email = email_input.text.strip_edges()
-	var full_name = full_name_input.text.strip_edges()
+	full_name = full_name_input.text.strip_edges()
 	var phone = phone_input.text.strip_edges()
 	var password = password_input.text.strip_edges()
 	
@@ -39,6 +40,11 @@ func _on_register_pressed():
 	
 	if success:
 		print("Usuario registrado con éxito")
-		get_tree().change_scene_to_file("res://scenes/login.tscn")  # Redirigir a la pantalla de login
+		var home_scene = load("res://Scenes/Home.tscn").instantiate()
+		home_scene.set_data(full_name)  # Pasamos parámetros
+		get_tree().root.add_child(home_scene)  # Agregar la escena al árbol
+		get_tree().current_scene.queue_free()  # Opcional: Cerrar la escena actual
+
 	else:
 		error_label.text = "El correo ya está registrado"
+		
