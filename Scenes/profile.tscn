@@ -119,6 +119,7 @@ theme_override_constants/separation = 7
 [node name="Name" type="Label" parent="PanelContainer1/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("5_akp77")
+theme_override_colors/font_color = Color(0.803922, 0, 0, 1)
 text = "Antonio Jesús"
 horizontal_alignment = 1
 
