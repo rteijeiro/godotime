@@ -1,11 +1,10 @@
 extends Control
 
-@onready var email_input = $VBoxContainer.get_node("Email")
-@onready var full_name_input = $VBoxContainer.get_node("User")
-@onready var phone_input = $VBoxContainer.get_node("Telephone")
-@onready var password_input = $VBoxContainer.get_node("Password")
+@onready var email_input = $Email
+@onready var full_name_input = $User
+@onready var phone_input = $Telephone
+@onready var password_input = $Password
 @onready var register_button = $Login
-@onready var error_label = $VBoxContainer.get_node("ErrorLabel")
 
 
 var user_manager = UserManager.new()
@@ -29,7 +28,7 @@ func _on_register_pressed():
 	
 	# Validar que los campos no estén vacíos
 	if email.is_empty() or full_name.is_empty() or phone.is_empty() or password.is_empty():
-		error_label.text = "Todos los campos son obligatorios"
+		print("Todos los campos son obligatorios")
 		return
 
 	# Crear usuario con horario por defecto
@@ -41,10 +40,10 @@ func _on_register_pressed():
 	if success:
 		print("Usuario registrado con éxito")
 		var home_scene = load("res://Scenes/Home.tscn").instantiate()
-		home_scene.set_data(full_name)  # Pasamos parámetros
+		home_scene.set_data(full_name, email, phone)  # Pasamos parámetros
 		get_tree().root.add_child(home_scene)  # Agregar la escena al árbol
 		get_tree().current_scene.queue_free()  # Opcional: Cerrar la escena actual
 
 	else:
-		error_label.text = "El correo ya está registrado"
+		print("El correo ya esta registrado")
 		

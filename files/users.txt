@@ -5,6 +5,12 @@
 		"password": "adrian321",
 		"phone": "123456789"
 	},
+	"alaba@gmail.com": {
+		"full_name": "David Alaba",
+		"hours": "08:00 - 14:00",
+		"password": "alaba",
+		"phone": "112233445"
+	},
 	"alejandro@gmail.com": {
 		"full_name": "alejandro mascato perez",
 		"hours": "08:00 - 14:00",
@@ -71,6 +77,12 @@
 		"password": "dfghdfgh",
 		"phone": "dghdfgh"
 	},
+	"kroos@gmail.com": {
+		"full_name": "Toni Kroos",
+		"hours": "08:00 - 14:00",
+		"password": "kroos",
+		"phone": "123321123"
+	},
 	"luis@gmail.com": {
 		"full_name": "Luis diaz fernandez",
 		"hours": "08:00 - 14:00",
@@ -100,6 +112,12 @@
 		"hours": "08:00 - 14:00",
 		"password": "pepito",
 		"phone": "123456789"
+	},
+	"raul@gmail.com": {
+		"full_name": "Raul Moreno de Avila",
+		"hours": "08:00 - 14:00",
+		"password": "raul",
+		"phone": "601455781"
 	},
 	"santi@gmail.com": {
 		"full_name": "santi sainz saez",

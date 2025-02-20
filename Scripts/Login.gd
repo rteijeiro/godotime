@@ -1,9 +1,8 @@
 extends Control
 
-@onready var email_input = $Email.get_node("User")
-@onready var password_input = $Password.get_node("Password")
+@onready var email_input = $Email
+@onready var password_input = $Password
 @onready var login_button = $Login
-@onready var error_label = $VBoxContainer.get_node("ErrorLabel")
 
 var user_manager = UserManager.new()
 
@@ -22,19 +21,19 @@ func _on_login_pressed() -> void:
 
 	# Validar que los campos no estén vacíos
 	if email.is_empty() or password.is_empty():
-		error_label.text = "Debe completar todos los campos."
+		print("Debe completar todos los campos")
 		return
 
 	# Buscar usuario en la base de datos
 	var user_data = user_manager.find_user(email)
 
 	if user_data == null:
-		error_label.text = "El usuario no existe."
+		print("El usuario no existe")
 		return
 
 	# Verificar contraseña
 	if user_data["password"] != password:
-		error_label.text = "Contraseña incorrecta."
+		print("Contraseña incorrecta")
 		return
 
 	# Login exitoso, obtener datos del usuario
