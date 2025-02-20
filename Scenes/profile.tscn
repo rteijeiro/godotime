@@ -1,11 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cab66ph13le1a"]
+[gd_scene load_steps=12 format=3 uid="uid://cab66ph13le1a"]
 
 [ext_resource type="Script" path="res://Scripts/profile.gd" id="1_0owv6"]
 [ext_resource type="Texture2D" uid="uid://dgt146hw0hx73" path="res://Images/top_home.png" id="1_3a885"]
 [ext_resource type="Texture2D" uid="uid://cw22h7mu55mvv" path="res://Images/logo_account.png" id="2_lrano"]
-[ext_resource type="Texture2D" uid="uid://dtk0cce46is38" path="res://Images/account_circle.png" id="2_xps4i"]
 [ext_resource type="Texture2D" uid="uid://cqvqqrtj7p7io" path="res://Images/add_home.png" id="3_72p7h"]
 [ext_resource type="Texture2D" uid="uid://c6r2xhwl5uqxj" path="res://Images/output.png" id="4_08n8a"]
+[ext_resource type="Texture2D" uid="uid://b0261xecggtte" path="res://Images/account_circle_green.png" id="4_mbiua"]
 [ext_resource type="Theme" uid="uid://cqppled3h7rd2" path="res://resources/defaultTheme.tres" id="5_akp77"]
 [ext_resource type="FontFile" uid="uid://dal6uxhenekc3" path="res://Fonts/Inter/static/Inter_18pt-Black.ttf" id="8_jl6oe"]
 
@@ -13,6 +13,13 @@
 bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ra3c"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ew204"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
@@ -47,7 +54,7 @@ grow_horizontal = 2
 scale = Vector2(1, 1.02381)
 texture = ExtResource("1_3a885")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Logo" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -59,34 +66,31 @@ offset_bottom = 160.0
 grow_horizontal = 2
 texture = ExtResource("2_lrano")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="Menu_panel" type="PanelContainer" parent="."]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
+anchors_preset = 12
 anchor_top = 1.0
-anchor_right = 0.5
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -206.0
-offset_top = -74.0
-offset_right = 206.0
+offset_top = -43.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.996333, 0.991546)
 theme_override_styles/panel = SubResource("StyleBoxFlat_wkjxg")
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+[node name="Margin" type="MarginContainer" parent="Menu_panel"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer"]
+[node name="Box" type="HBoxContainer" parent="Menu_panel/Margin"]
 layout_mode = 2
 
-[node name="Account" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer"]
+[node name="Account" type="Button" parent="Menu_panel/Margin/Box"]
 layout_mode = 2
 size_flags_horizontal = 6
-icon = ExtResource("2_xps4i")
+icon = ExtResource("4_mbiua")
 flat = true
 
-[node name="Home" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer"]
+[node name="Home" type="Button" parent="Menu_panel/Margin/Box"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
@@ -94,7 +98,7 @@ icon = ExtResource("3_72p7h")
 flat = true
 icon_alignment = 2
 
-[node name="Output" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer"]
+[node name="Output" type="Button" parent="Menu_panel/Margin/Box"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
@@ -102,15 +106,22 @@ icon = ExtResource("4_08n8a")
 flat = true
 
 [node name="User_panel" type="PanelContainer" parent="."]
-layout_mode = 2
-offset_left = 28.0
-offset_top = 270.0
-offset_right = 386.0
-offset_bottom = 413.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -191.0
+offset_right = 179.0
+offset_bottom = 22.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("5_akp77")
 theme_override_styles/panel = SubResource("StyleBoxFlat_7ra3c")
 
-[node name="MarginContainer" type="MarginContainer" parent="User_panel"]
+[node name="Margin" type="MarginContainer" parent="User_panel"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -119,11 +130,11 @@ theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 15
 theme_override_constants/margin_bottom = 15
 
-[node name="VBoxContainer" type="VBoxContainer" parent="User_panel/MarginContainer"]
+[node name="Box" type="VBoxContainer" parent="User_panel/Margin"]
 layout_mode = 2
-theme_override_constants/separation = 7
+theme_override_constants/separation = 18
 
-[node name="Name" type="Label" parent="User_panel/MarginContainer/VBoxContainer"]
+[node name="Name" type="Label" parent="User_panel/Margin/Box"]
 layout_mode = 2
 theme = ExtResource("5_akp77")
 theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
@@ -132,7 +143,7 @@ theme_override_font_sizes/font_size = 16
 text = "Antonio Jesús"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="User_panel/MarginContainer/VBoxContainer/Name"]
+[node name="HSeparator" type="HSeparator" parent="User_panel/Margin/Box/Name"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -142,7 +153,7 @@ offset_top = -4.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Surname" type="Label" parent="User_panel/MarginContainer/VBoxContainer"]
+[node name="Surname" type="Label" parent="User_panel/Margin/Box"]
 layout_mode = 2
 theme = ExtResource("5_akp77")
 theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
@@ -151,7 +162,7 @@ theme_override_font_sizes/font_size = 16
 text = "Sánchez Rosales"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="User_panel/MarginContainer/VBoxContainer/Surname"]
+[node name="HSeparator" type="HSeparator" parent="User_panel/Margin/Box/Surname"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -161,7 +172,7 @@ offset_top = -4.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Email" type="Label" parent="User_panel/MarginContainer/VBoxContainer"]
+[node name="Email" type="Label" parent="User_panel/Margin/Box"]
 layout_mode = 2
 theme = ExtResource("5_akp77")
 theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
@@ -170,7 +181,7 @@ theme_override_font_sizes/font_size = 16
 text = "correoelectronico@gmail.com"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="User_panel/MarginContainer/VBoxContainer/Email"]
+[node name="HSeparator" type="HSeparator" parent="User_panel/Margin/Box/Email"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -180,7 +191,7 @@ offset_top = -4.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Number" type="Label" parent="User_panel/MarginContainer/VBoxContainer"]
+[node name="Number" type="Label" parent="User_panel/Margin/Box"]
 layout_mode = 2
 theme = ExtResource("5_akp77")
 theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
@@ -189,26 +200,34 @@ theme_override_font_sizes/font_size = 16
 text = "9887412335"
 horizontal_alignment = 1
 
-[node name="PanelContainer2" type="PanelContainer" parent="."]
-layout_mode = 2
-offset_left = 28.0
-offset_top = 472.0
-offset_right = 386.0
-offset_bottom = 620.0
+[node name="Shift_panel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -180.0
+offset_top = -377.0
+offset_right = 179.0
+offset_bottom = -190.0
+grow_horizontal = 2
+grow_vertical = 0
 theme = ExtResource("5_akp77")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ew204")
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer2"]
+[node name="Margin" type="MarginContainer" parent="Shift_panel"]
 layout_mode = 2
 theme_override_constants/margin_left = 35
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 35
 theme_override_constants/margin_bottom = 15
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer2/MarginContainer"]
+[node name="Box" type="VBoxContainer" parent="Shift_panel/Margin"]
 layout_mode = 2
 theme_override_constants/separation = 20
 
-[node name="Text" type="Label" parent="PanelContainer2/MarginContainer/VBoxContainer"]
+[node name="Text" type="Label" parent="Shift_panel/Margin/Box"]
 layout_mode = 2
 theme = ExtResource("5_akp77")
 theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
@@ -217,7 +236,7 @@ theme_override_font_sizes/font_size = 14
 text = "Establecer mi jornada laboral"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="PanelContainer2/MarginContainer/VBoxContainer/Text"]
+[node name="HSeparator" type="HSeparator" parent="Shift_panel/Margin/Box/Text"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -227,7 +246,7 @@ offset_top = -4.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Accept" type="Button" parent="PanelContainer2/MarginContainer/VBoxContainer"]
+[node name="Accept" type="Button" parent="Shift_panel/Margin/Box"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -239,7 +258,7 @@ text = "Aceptar"
 flat = true
 icon_alignment = 1
 
-[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Account" to="." method="_on_account_pressed"]
-[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Home" to="." method="_on_home_pressed"]
-[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Output" to="." method="_on_output_pressed"]
-[connection signal="pressed" from="PanelContainer2/MarginContainer/VBoxContainer/Accept" to="." method="_on_accept_pressed"]
+[connection signal="pressed" from="Menu_panel/Margin/Box/Account" to="." method="_on_account_pressed"]
+[connection signal="pressed" from="Menu_panel/Margin/Box/Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="Menu_panel/Margin/Box/Output" to="." method="_on_output_pressed"]
+[connection signal="pressed" from="Shift_panel/Margin/Box/Accept" to="." method="_on_accept_pressed"]
