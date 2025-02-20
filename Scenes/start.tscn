@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://eo7i1hltr14e"]
+[gd_scene load_steps=9 format=3 uid="uid://eo7i1hltr14e"]
 
 [ext_resource type="Script" path="res://Scripts/Start.gd" id="1_yniwk"]
 [ext_resource type="Texture2D" uid="uid://c83fc4s23f15g" path="res://Images/logo.png" id="2_8eph5"]
 [ext_resource type="FontFile" uid="uid://cgctwousl1brr" path="res://Fonts/Inter/static/Inter_24pt-Black.ttf" id="3_mbs36"]
 [ext_resource type="FontFile" uid="uid://4jdr3vvkxcbp" path="res://Fonts/Inter/static/Inter_18pt-Bold.ttf" id="4_w6aog"]
 [ext_resource type="Texture2D" uid="uid://bndd8q0c3auqy" path="res://Images/button_base.png" id="5_l72kl"]
+[ext_resource type="FontFile" uid="uid://iund57xk6mri" path="res://Fonts/Inter/static/Inter_18pt-Regular.ttf" id="6_2y8b7"]
 [ext_resource type="FontFile" uid="uid://34vaidepyp6q" path="res://Fonts/Inter/Inter-VariableFont_opsz,wght.ttf" id="6_yoxf0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y453a"]
@@ -25,6 +26,7 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = -17.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.00345, 1.02011)
@@ -35,10 +37,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -85.0
-offset_top = 26.0
-offset_right = 85.0
-offset_bottom = 196.0
+offset_left = -85.5
+offset_top = 53.0
+offset_right = 84.5
+offset_bottom = 223.0
 grow_horizontal = 2
 texture = ExtResource("2_8eph5")
 
@@ -49,10 +51,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -105.5
-offset_top = -233.0
-offset_right = 105.5
-offset_bottom = -155.0
+offset_left = -107.5
+offset_top = -205.0
+offset_right = 106.5
+offset_bottom = -127.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
@@ -67,10 +69,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -154.0
-offset_top = 259.0
-offset_right = 154.0
-offset_bottom = 329.0
+offset_left = -154.5
+offset_top = 227.0
+offset_right = 153.5
+offset_bottom = 297.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.974241, 1.03579)
@@ -84,17 +86,18 @@ icon = ExtResource("5_l72kl")
 flat = true
 icon_alignment = 1
 
-[node name="Text" type="Label" parent="Login"]
+[node name="Text" type="Label" parent="."]
 layout_mode = 0
-offset_left = -8.72474
-offset_top = 74.5607
-offset_right = 217.275
-offset_bottom = 102.561
+offset_left = 39.0
+offset_top = 772.0
+offset_right = 271.0
+offset_bottom = 800.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_2y8b7")
 theme_override_font_sizes/font_size = 20
-text = "Aún no tienes cuenta? -"
+text = "¿Aún no tienes cuenta? -"
 
-[node name="Register" type="Label" parent="Login/Text"]
+[node name="Register" type="Label" parent="Text"]
 layout_mode = 0
 offset_left = 234.0
 offset_top = 2.0
@@ -105,7 +108,7 @@ theme_override_fonts/font = ExtResource("6_yoxf0")
 theme_override_font_sizes/font_size = 20
 text = "Regístrate"
 
-[node name="Sing In" type="Button" parent="Login/Text"]
+[node name="Sing In" type="Button" parent="Text"]
 layout_mode = 0
 offset_left = 233.0
 offset_top = 3.99994
@@ -120,4 +123,4 @@ text = "
 "
 
 [connection signal="pressed" from="Login" to="." method="_on_login_pressed"]
-[connection signal="pressed" from="Login/Text/Sing In" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Text/Sing In" to="." method="_on_button_2_pressed"]
