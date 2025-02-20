@@ -166,3 +166,5 @@ text = "Crear cuenta
 icon = ExtResource("5_qrbfx")
 flat = true
 icon_alignment = 1
+
+[connection signal="pressed" from="Login" to="." method="_on_login_pressed"]

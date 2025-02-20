@@ -1,15 +1,39 @@
 {
+	"adrian@gmail.com": {
+		"full_name": "Adrian romero garcía",
+		"hours": "08:00 - 14:00",
+		"password": "adrian321",
+		"phone": "123456789"
+	},
+	"alejandro@gmail.com": {
+		"full_name": "alejandro mascato perez",
+		"hours": "08:00 - 14:00",
+		"password": "mascatito123",
+		"phone": "123456789"
+	},
+	"ana@gmail.com": {
+		"full_name": "ana",
+		"hours": "08:00 - 14:00",
+		"password": "anaita",
+		"phone": "445112336"
+	},
+	"andres@gmail.com": {
+		"full_name": "andres rodriguez perez",
+		"hours": "08:00 - 14:00",
+		"password": "andresito123",
+		"phone": "11447788"
+	},
 	"asdasdas": {
 		"full_name": "dasdadsasd",
 		"hours": "08:00 - 14:00",
 		"password": "aasdaddasd",
 		"phone": "6456456"
 	},
-	"asdgsdfg": {
-		"full_name": "dfsggfsd",
+	"asdasdasd": {
+		"full_name": "asdasda",
 		"hours": "08:00 - 14:00",
-		"password": "dfsgsdfg",
-		"phone": "sdfgsdfg"
+		"password": "adsadads",
+		"phone": "asdadad"
 	},
 	"correo1@gmail.com": {
 		"full_name": "antonio",
@@ -17,35 +41,47 @@
 		"password": "contraseña",
 		"phone": "456123789"
 	},
-	"dfghfgh": {
-		"full_name": "gfhhghf",
+	"dfdsfsdf": {
+		"full_name": "sdfsdfsf",
 		"hours": "08:00 - 14:00",
-		"password": "ghffghghf",
-		"phone": "hfghfg"
+		"password": "sdfdsfsdf",
+		"phone": "sdfsdfsf"
 	},
-	"dfgsdfgsfg": {
-		"full_name": "dfsgsdfg",
+	"elena@gmail.com": {
+		"full_name": "elenita serrano",
 		"hours": "08:00 - 14:00",
-		"password": "dfgsgsdfg",
-		"phone": "dfsgsdfg"
+		"password": "elenita123",
+		"phone": "44556634"
 	},
-	"dfhdfgh": {
-		"full_name": "cxbnvbcn",
+	"francisco@gmail.com": {
+		"full_name": "francisco javier",
 		"hours": "08:00 - 14:00",
-		"password": "dgshdfghfgh",
-		"phone": "sdgfhdfgh"
+		"password": "paquito123",
+		"phone": "11223366"
 	},
-	"erttghbgdf": {
-		"full_name": "dfghdfgh",
+	"luis@gmail.com": {
+		"full_name": "Luis diaz fernandez",
 		"hours": "08:00 - 14:00",
-		"password": "dfghhdfgh",
-		"phone": "fgdhfghd"
+		"password": "luis456",
+		"phone": "44556633"
 	},
-	"fdgsgd": {
-		"full_name": "sdfghdsh",
+	"ontiveros@gmail.com": {
+		"full_name": "Javier Ontiveros",
 		"hours": "08:00 - 14:00",
-		"password": "fdghdgfdf",
-		"phone": "dfshdfhs"
+		"password": "ontiveroscadiz",
+		"phone": "144785236"
+	},
+	"pablo@gmail.com": {
+		"full_name": "Pablo Granado Borja",
+		"hours": "08:00 - 14:00",
+		"password": "pablito",
+		"phone": "123456789"
+	},
+	"paco@gmail.com": {
+		"full_name": "paquito",
+		"hours": "08:00 - 14:00",
+		"password": "paquito123",
+		"phone": "774112336"
 	},
 	"pepe@gmail.com": {
 		"full_name": "pepe rodriguez fuentes",
@@ -58,5 +94,17 @@
 		"hours": "08:00 - 14:00",
 		"password": "santi",
 		"phone": "456789123"
+	},
+	"toniferico@gmail.com": {
+		"full_name": "Antonio Jesús Sánchez Rosales",
+		"hours": "08:00 - 14:00",
+		"password": "antoñito123",
+		"phone": "644877298"
+	},
+	"xzczc": {
+		"full_name": "zxczxczxc",
+		"hours": "08:00 - 14:00",
+		"password": "zcxzxczc",
+		"phone": "zxczcx"
 	}
 }
