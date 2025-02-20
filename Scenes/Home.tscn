@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cs7iafkhed4pt"]
+[gd_scene load_steps=17 format=3 uid="uid://cs7iafkhed4pt"]
 
 [ext_resource type="Texture2D" uid="uid://dgt146hw0hx73" path="res://Images/top_home.png" id="1_82umt"]
 [ext_resource type="Script" path="res://Scripts/home.gd" id="1_qvn61"]
@@ -9,8 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://c6r2xhwl5uqxj" path="res://Images/output.png" id="4_nxlr7"]
 [ext_resource type="FontFile" uid="uid://pape1wgjnach" path="res://Fonts/Inter/static/Inter_24pt-Medium.ttf" id="7_bhwor"]
 [ext_resource type="Theme" uid="uid://cqppled3h7rd2" path="res://resources/defaultTheme.tres" id="8_3acw3"]
+[ext_resource type="Texture2D" uid="uid://dkhwtulxn6qbq" path="res://Images/circular-determinate progress indicator.png" id="8_rpxbx"]
 [ext_resource type="Texture2D" uid="uid://ckqsahj308dk1" path="res://Images/blue_button.png" id="8_seqx8"]
 [ext_resource type="Texture2D" uid="uid://cap57alllf614" path="res://Images/green_button.png" id="9_11xua"]
+[ext_resource type="Theme" uid="uid://b5ktca77ekcjk" path="res://buttonPause.tres" id="9_wqprb"]
+[ext_resource type="Texture2D" uid="uid://bmjpqcvuf85p4" path="res://Images/pause.png" id="10_terns"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvucd"]
 bg_color = Color(1, 1, 1, 1)
@@ -144,6 +147,14 @@ icon = ExtResource("9_11xua")
 flat = true
 icon_alignment = 1
 
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 382.0
+offset_right = 322.0
+offset_bottom = 612.0
+texture = ExtResource("8_rpxbx")
+
 [node name="PanelContainer1" type="PanelContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -151,10 +162,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -170.0
-offset_top = -31.0
-offset_right = 170.0
-offset_bottom = 31.0
+offset_left = -195.5
+offset_top = 210.0
+offset_right = 195.5
+offset_bottom = 334.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("8_3acw3")
@@ -168,9 +179,11 @@ theme_override_constants/margin_bottom = 10
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer1/MarginContainer"]
 layout_mode = 2
+alignment = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer1/MarginContainer/VBoxContainer"]
 layout_mode = 2
+alignment = 1
 
 [node name="Start" type="Button" parent="PanelContainer1/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -183,6 +196,22 @@ layout_mode = 2
 text = "Terminar"
 flat = true
 icon_alignment = 1
+
+[node name="Button" type="Button" parent="PanelContainer1/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("9_wqprb")
+flat = true
+icon_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer1/MarginContainer/VBoxContainer/Button"]
+layout_mode = 0
+offset_left = 9.5
+offset_top = 9.0
+offset_right = 49.5
+offset_bottom = 49.0
+texture = ExtResource("10_terns")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
