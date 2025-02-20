@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cab66ph13le1a"]
+[gd_scene load_steps=13 format=3 uid="uid://cab66ph13le1a"]
 
 [ext_resource type="Script" path="res://Scripts/profile.gd" id="1_0owv6"]
 [ext_resource type="Texture2D" uid="uid://dgt146hw0hx73" path="res://Images/top_home.png" id="1_3a885"]
@@ -9,9 +9,17 @@
 [ext_resource type="Theme" uid="uid://cqppled3h7rd2" path="res://resources/defaultTheme.tres" id="5_akp77"]
 [ext_resource type="Theme" uid="uid://mbjxja2oisw3" path="res://resources/greenTheme.tres" id="6_8ioup"]
 [ext_resource type="Theme" uid="uid://pa7a5olww6a1" path="res://resources/blockTheme.tres" id="7_jt5ro"]
+[ext_resource type="FontFile" uid="uid://dal6uxhenekc3" path="res://Fonts/Inter/static/Inter_18pt-Black.ttf" id="8_jl6oe"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wkjxg"]
 bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7ra3c"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Profile" type="Control"]
 layout_mode = 3
@@ -102,6 +110,7 @@ offset_top = 270.0
 offset_right = 386.0
 offset_bottom = 413.0
 theme = ExtResource("5_akp77")
+theme_override_styles/panel = SubResource("StyleBoxFlat_7ra3c")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer1"]
 layout_mode = 2
@@ -119,7 +128,9 @@ theme_override_constants/separation = 7
 [node name="Name" type="Label" parent="PanelContainer1/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("5_akp77")
-theme_override_colors/font_color = Color(0.803922, 0, 0, 1)
+theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
+theme_override_fonts/font = ExtResource("8_jl6oe")
+theme_override_font_sizes/font_size = 16
 text = "Antonio Jesús"
 horizontal_alignment = 1
 
@@ -136,7 +147,9 @@ grow_vertical = 0
 [node name="Surname" type="Label" parent="PanelContainer1/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("5_akp77")
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
+theme_override_fonts/font = ExtResource("8_jl6oe")
+theme_override_font_sizes/font_size = 16
 text = "Sánchez Rosales"
 horizontal_alignment = 1
 
@@ -153,6 +166,9 @@ grow_vertical = 0
 [node name="Email" type="Label" parent="PanelContainer1/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("5_akp77")
+theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
+theme_override_fonts/font = ExtResource("8_jl6oe")
+theme_override_font_sizes/font_size = 16
 text = "correoelectronico@gmail.com"
 horizontal_alignment = 1
 
@@ -169,6 +185,9 @@ grow_vertical = 0
 [node name="Number" type="Label" parent="PanelContainer1/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("5_akp77")
+theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
+theme_override_fonts/font = ExtResource("8_jl6oe")
+theme_override_font_sizes/font_size = 16
 text = "9887412335"
 horizontal_alignment = 1
 
