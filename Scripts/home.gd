@@ -4,10 +4,14 @@ extends Control
 @onready var date_label = $Panel/HBoxContainer/Date
 
 var user_name = ""
+var user_email = ""
+var user_phone = ""
 
 # Método para recibir parámetros
-func set_data(name: String):
+func set_data(name: String, email: String, phone: String):
 	user_name = name
+	user_email = email
+	user_phone = phone
 
 # Cuando la escena esté lista, actualizar los textos
 func _ready():
@@ -16,7 +20,10 @@ func _ready():
 	update_date()
 
 func _on_account_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/profile.tscn")
+	var profile_scene = load("res://Scenes/profile.tscn").instantiate()
+	profile_scene.set_data(user_name, user_email, user_phone)  # Pasamos parámetros a Home
+	get_tree().root.add_child(profile_scene)  # Agregar la escena al árbol
+	
 
 # Funcion para obtener la fecha a tiempo real
 # Diccionario para traducir los meses al español
