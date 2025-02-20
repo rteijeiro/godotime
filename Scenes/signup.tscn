@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://btv5w6rx3036o"]
+[gd_scene load_steps=9 format=3 uid="uid://52qd41rs7jsm"]
 
 [ext_resource type="Script" path="res://Scripts/Signup.gd" id="1_1tv4o"]
 [ext_resource type="Texture2D" uid="uid://c83fc4s23f15g" path="res://Images/logo.png" id="1_luai5"]
@@ -23,7 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1tv4o")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -47,7 +47,7 @@ offset_bottom = 196.0
 grow_horizontal = 2
 texture = ExtResource("1_luai5")
 
-[node name="Shiftly" type="Label" parent="."]
+[node name="Title" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

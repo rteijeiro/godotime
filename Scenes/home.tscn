@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cs7iafkhed4pt"]
+[gd_scene load_steps=18 format=3 uid="uid://cs7iafkhed4pt"]
 
 [ext_resource type="Script" path="res://Scripts/home.gd" id="1_8q3f2"]
 [ext_resource type="Texture2D" uid="uid://dgt146hw0hx73" path="res://Images/top_home.png" id="2_wkk61"]
@@ -9,10 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://cap57alllf614" path="res://Images/green_button.png" id="7_l7cyg"]
 [ext_resource type="Theme" uid="uid://cqppled3h7rd2" path="res://resources/defaultTheme.tres" id="8_4xr2r"]
 [ext_resource type="Texture2D" uid="uid://bud16l8aafdmu" path="res://Images/circular-determinateprogressindicator.png" id="8_vvm3o"]
-[ext_resource type="Theme" uid="uid://003bascnugva" path="res://resources/buttonPause.tres" id="9_nw6n7"]
+[ext_resource type="Theme" path="res://resources/buttonPause.tres" id="9_nw6n7"]
 [ext_resource type="Texture2D" uid="uid://bmjpqcvuf85p4" path="res://Images/pause.png" id="10_pjrwj"]
 [ext_resource type="Texture2D" uid="uid://dtk0cce46is38" path="res://Images/account_circle.png" id="11_xqe6v"]
-[ext_resource type="Texture2D" uid="uid://cqvqqrtj7p7io" path="res://Images/add_home.png" id="12_lofsu"]
+[ext_resource type="Texture2D" uid="uid://cks54fw7anss2" path="res://Images/add_home_green.png" id="13_4klr5"]
 [ext_resource type="Texture2D" uid="uid://c6r2xhwl5uqxj" path="res://Images/output.png" id="13_7pjgl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvucd"]
@@ -25,7 +25,9 @@ corner_radius_bottom_left = 10
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2rc41"]
 bg_color = Color(1, 1, 1, 1)
 
-[node name="Home" type="Control"]
+[sub_resource type="Theme" id="Theme_h51c8"]
+
+[node name="Home2" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -187,12 +189,18 @@ alignment = 1
 
 [node name="Start" type="Button" parent="PanelContainer1/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_f7xfr")
+theme_override_font_sizes/font_size = 16
 text = "Comenzar"
 flat = true
 icon_alignment = 1
 
 [node name="Finish" type="Button" parent="PanelContainer1/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_f7xfr")
+theme_override_font_sizes/font_size = 16
 text = "Terminar"
 flat = true
 icon_alignment = 1
@@ -206,11 +214,18 @@ flat = true
 icon_alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="PanelContainer1/MarginContainer/VBoxContainer/Button"]
-layout_mode = 0
-offset_left = 9.5
-offset_top = 9.0
-offset_right = 49.5
-offset_bottom = 49.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -12.0
+offset_top = -12.0
+offset_right = 12.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("10_pjrwj")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
@@ -244,7 +259,8 @@ flat = true
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
-icon = ExtResource("12_lofsu")
+theme = SubResource("Theme_h51c8")
+icon = ExtResource("13_4klr5")
 flat = true
 icon_alignment = 2
 
