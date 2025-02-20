@@ -39,12 +39,14 @@ func _on_login_pressed() -> void:
 
 	# Login exitoso, obtener datos del usuario
 	var full_name = user_data["full_name"]
+	var user_email = user_data["email"]
+	var user_phone = user_data["phone"]
 	# var schedule = user_data["schedule"]
 
 	print("Usuario autenticado:", full_name)
 
 	# Cargar la escena Home y pasar los datos del usuario
 	var home_scene = load("res://Scenes/Home.tscn").instantiate()
-	home_scene.set_data(full_name)  # Pasamos parámetros a Home
+	home_scene.set_data(full_name, user_email, user_phone)  # Pasamos parámetros a Home
 	get_tree().root.add_child(home_scene)  # Agregar la escena al árbol
 	get_tree().current_scene.queue_free()  # Cerrar la escena actual
