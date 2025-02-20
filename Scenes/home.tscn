@@ -1,18 +1,18 @@
 [gd_scene load_steps=16 format=3 uid="uid://cs7iafkhed4pt"]
 
-[ext_resource type="Texture2D" uid="uid://dgt146hw0hx73" path="res://Images/top_home.png" id="1_82umt"]
-[ext_resource type="Script" path="res://Scripts/home.gd" id="1_qvn61"]
-[ext_resource type="Texture2D" uid="uid://cw6nllypx46it" path="res://Images/logo_white.png" id="2_sutsk"]
-[ext_resource type="Texture2D" uid="uid://dtk0cce46is38" path="res://Images/account_circle.png" id="2_yrt7p"]
-[ext_resource type="FontFile" uid="uid://dal6uxhenekc3" path="res://Fonts/Inter/static/Inter_18pt-Black.ttf" id="3_d6q8c"]
-[ext_resource type="Texture2D" uid="uid://cqvqqrtj7p7io" path="res://Images/add_home.png" id="3_k5ib8"]
-[ext_resource type="Texture2D" uid="uid://c6r2xhwl5uqxj" path="res://Images/output.png" id="4_nxlr7"]
-[ext_resource type="FontFile" uid="uid://pape1wgjnach" path="res://Fonts/Inter/static/Inter_24pt-Medium.ttf" id="7_bhwor"]
-[ext_resource type="Theme" uid="uid://cqppled3h7rd2" path="res://resources/defaultTheme.tres" id="8_3acw3"]
-[ext_resource type="Texture2D" uid="uid://ckqsahj308dk1" path="res://Images/blue_button.png" id="8_seqx8"]
-[ext_resource type="Texture2D" uid="uid://cap57alllf614" path="res://Images/green_button.png" id="9_11xua"]
-[ext_resource type="Theme" path="res://buttonPause.tres" id="9_wqprb"]
-[ext_resource type="Texture2D" uid="uid://bmjpqcvuf85p4" path="res://Images/pause.png" id="10_terns"]
+[ext_resource type="Script" path="res://Scripts/home.gd" id="1_8q3f2"]
+[ext_resource type="Texture2D" uid="uid://dgt146hw0hx73" path="res://Images/top_home.png" id="2_wkk61"]
+[ext_resource type="Texture2D" uid="uid://cw6nllypx46it" path="res://Images/logo_white.png" id="3_s5003"]
+[ext_resource type="FontFile" uid="uid://dal6uxhenekc3" path="res://Fonts/Inter/static/Inter_18pt-Black.ttf" id="4_f7xfr"]
+[ext_resource type="FontFile" uid="uid://pape1wgjnach" path="res://Fonts/Inter/static/Inter_24pt-Medium.ttf" id="5_lgpdq"]
+[ext_resource type="Texture2D" uid="uid://ckqsahj308dk1" path="res://Images/blue_button.png" id="6_iy4d0"]
+[ext_resource type="Texture2D" uid="uid://cap57alllf614" path="res://Images/green_button.png" id="7_l7cyg"]
+[ext_resource type="Theme" uid="uid://cqppled3h7rd2" path="res://resources/defaultTheme.tres" id="8_4xr2r"]
+[ext_resource type="Theme" uid="uid://b5ktca77ekcjk" path="res://buttonPause.tres" id="9_nw6n7"]
+[ext_resource type="Texture2D" uid="uid://bmjpqcvuf85p4" path="res://Images/pause.png" id="10_pjrwj"]
+[ext_resource type="Texture2D" uid="uid://dtk0cce46is38" path="res://Images/account_circle.png" id="11_xqe6v"]
+[ext_resource type="Texture2D" uid="uid://cqvqqrtj7p7io" path="res://Images/add_home.png" id="12_lofsu"]
+[ext_resource type="Texture2D" uid="uid://c6r2xhwl5uqxj" path="res://Images/output.png" id="13_7pjgl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pvucd"]
 bg_color = Color(1, 1, 1, 1)
@@ -32,7 +32,7 @@ anchor_bottom = 1.0
 offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_qvn61")
+script = ExtResource("1_8q3f2")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
@@ -51,7 +51,7 @@ anchor_right = 1.0
 offset_bottom = 190.0
 grow_horizontal = 2
 scale = Vector2(1, 1.02381)
-texture = ExtResource("1_82umt")
+texture = ExtResource("2_wkk61")
 
 [node name="MarginContainer" type="MarginContainer" parent="Top"]
 layout_mode = 0
@@ -62,13 +62,13 @@ offset_bottom = 154.0
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("2_sutsk")
+texture = ExtResource("3_s5003")
 
 [node name="Name" type="Label" parent="Top/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
-theme_override_fonts/font = ExtResource("3_d6q8c")
+theme_override_fonts/font = ExtResource("4_f7xfr")
 theme_override_font_sizes/font_size = 22
 text = "Antonio Jesús Sanchez Rosales"
 horizontal_alignment = 1
@@ -93,7 +93,7 @@ offset_right = 84.5
 offset_bottom = 34.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
-theme_override_fonts/font = ExtResource("3_d6q8c")
+theme_override_fonts/font = ExtResource("4_f7xfr")
 theme_override_font_sizes/font_size = 20
 text = "Jornada prevista"
 
@@ -128,21 +128,21 @@ grow_vertical = 2
 [node name="Date" type="Button" parent="Panel/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0.709804, 1, 1)
-theme_override_fonts/font = ExtResource("7_bhwor")
+theme_override_fonts/font = ExtResource("5_lgpdq")
 theme_override_font_sizes/font_size = 16
 text = "17 feb 2025"
-icon = ExtResource("8_seqx8")
+icon = ExtResource("6_iy4d0")
 flat = true
 icon_alignment = 1
 
 [node name="Length" type="Button" parent="Panel/HBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 1, 0.482353, 1)
-theme_override_fonts/font = ExtResource("7_bhwor")
+theme_override_fonts/font = ExtResource("5_lgpdq")
 theme_override_font_sizes/font_size = 16
 text = "8:00 hours
 "
-icon = ExtResource("9_11xua")
+icon = ExtResource("7_l7cyg")
 flat = true
 icon_alignment = 1
 
@@ -166,7 +166,7 @@ offset_right = 195.5
 offset_bottom = 334.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("8_3acw3")
+theme = ExtResource("8_4xr2r")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer1"]
 layout_mode = 2
@@ -195,21 +195,21 @@ text = "Terminar"
 flat = true
 icon_alignment = 1
 
-[node name="Action" type="Button" parent="PanelContainer1/MarginContainer/VBoxContainer"]
+[node name="Button" type="Button" parent="PanelContainer1/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme = ExtResource("9_wqprb")
+theme = ExtResource("9_nw6n7")
 flat = true
 icon_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer1/MarginContainer/VBoxContainer/Action"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer1/MarginContainer/VBoxContainer/Button"]
 layout_mode = 0
 offset_left = 9.5
 offset_top = 9.0
 offset_right = 49.5
 offset_bottom = 49.0
-texture = ExtResource("10_terns")
+texture = ExtResource("10_pjrwj")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -235,14 +235,14 @@ layout_mode = 2
 [node name="Account" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
-icon = ExtResource("2_yrt7p")
+icon = ExtResource("11_xqe6v")
 flat = true
 
 [node name="Home" type="Button" parent="PanelContainer/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
-icon = ExtResource("3_k5ib8")
+icon = ExtResource("12_lofsu")
 flat = true
 icon_alignment = 2
 
@@ -250,7 +250,7 @@ icon_alignment = 2
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
-icon = ExtResource("4_nxlr7")
+icon = ExtResource("13_7pjgl")
 flat = true
 
 [connection signal="pressed" from="PanelContainer1/MarginContainer/VBoxContainer/HBoxContainer/Finish" to="." method="_on_finish_pressed"]
