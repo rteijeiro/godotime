@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://crdpgsyupauh0"]
+
+[ext_resource type="FontFile" uid="uid://4jdr3vvkxcbp" path="res://Fonts/Inter/static/Inter_18pt-Bold.ttf" id="1_ssaps"]
+
+[resource]
+Label/colors/font_color = Color(0, 0, 0, 1)
+Label/font_sizes/font_size = 60
+Label/fonts/font = ExtResource("1_ssaps")
