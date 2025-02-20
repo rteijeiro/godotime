@@ -253,5 +253,7 @@ size_flags_vertical = 4
 icon = ExtResource("4_nxlr7")
 flat = true
 
+[connection signal="pressed" from="PanelContainer1/MarginContainer/VBoxContainer/HBoxContainer/Finish" to="." method="_on_finish_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Account" to="." method="_on_account_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Home" to="." method="_on_home_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Output" to="." method="_on_output_pressed"]
