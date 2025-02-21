@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://o3nqunngc5sc"]
+[gd_scene load_steps=20 format=3 uid="uid://cxkke16ad2arj"]
 
 [ext_resource type="Script" path="res://Scripts/home.gd" id="1_8q3f2"]
 [ext_resource type="Texture2D" uid="uid://dgt146hw0hx73" path="res://Images/top_home.png" id="2_wkk61"]
@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://cap57alllf614" path="res://Images/green_button.png" id="7_l7cyg"]
 [ext_resource type="Theme" uid="uid://cqppled3h7rd2" path="res://resources/defaultTheme.tres" id="8_4xr2r"]
 [ext_resource type="Texture2D" uid="uid://qrlo8nsyis25" path="res://Images/07.png" id="8_llvis"]
-[ext_resource type="Theme" uid="uid://crdpgsyupauh0" path="res://resources/progressLabel.tres" id="9_7t724"]
-[ext_resource type="Theme" path="res://resources/buttonPause.tres" id="9_nw6n7"]
+[ext_resource type="Theme" path="res://resources/progressLabel.tres" id="9_7t724"]
+[ext_resource type="Theme" uid="uid://003bascnugva" path="res://resources/buttonPause.tres" id="9_nw6n7"]
 [ext_resource type="Texture2D" uid="uid://bmjpqcvuf85p4" path="res://Images/pause.png" id="10_pjrwj"]
 [ext_resource type="Texture2D" uid="uid://dtk0cce46is38" path="res://Images/account_circle.png" id="11_xqe6v"]
 [ext_resource type="Texture2D" uid="uid://cks54fw7anss2" path="res://Images/add_home_green.png" id="13_4klr5"]
