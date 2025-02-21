@@ -6,6 +6,7 @@ extends Control
 var user_name = ""
 var user_email = ""
 var user_phone = ""
+var timer = true
 
 # Método para recibir parámetros
 func set_data(name: String, email: String, phone: String):
@@ -54,6 +55,14 @@ func _on_output_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/logout.tscn")
 
 func _on_timer_timeout() -> void:
-	$TextureProgressBar.value += 1
-	$LabelProgressBar.text = str($TextureProgressBar.value)
-	$Timer.start()
+	if timer == true:
+		$Timer.start()
+		$TextureProgressBar.value += 1
+		$LabelProgressBar.text = str($TextureProgressBar.value)
+
+func _on_pause_pressed() -> void:
+	if timer == true:
+		timer = false
+	else:
+		timer = true
+		$Timer.start()

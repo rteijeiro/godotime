@@ -177,3 +177,4 @@ icon = ExtResource("7_gnb1l")
 flat = true
 
 [connection signal="pressed" from="Login" to="." method="_on_login_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
