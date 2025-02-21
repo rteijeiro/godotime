@@ -8,6 +8,7 @@ var user_email = ""
 var user_phone = ""
 var timer = true
 
+
 # Método para recibir parámetros
 func set_data(name: String, email: String, phone: String):
 	user_name = name
@@ -44,14 +45,14 @@ func update_date():
 	date_label.text = formatted_date  # Mostramos la fecha en el botón
 
 func _on_home_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Home.tscn")
-
+	get_tree().change_scene_to_file("res://Scenes/home.tscn")
 
 func _on_finish_pressed() -> void:
+	timer = false
 	get_tree().change_scene_to_file("res://Scenes/logout.tscn")
 
-
 func _on_output_pressed() -> void:
+	timer = false
 	get_tree().change_scene_to_file("res://Scenes/logout.tscn")
 
 func _on_timer_timeout() -> void:
