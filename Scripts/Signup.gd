@@ -9,6 +9,7 @@ extends Control
 var user_manager = UserManager.new()
 var full_name: String
 
+
 func _ready():
 	# Debugging to check if the register button is found
 	print("Register button found:", register_button)

@@ -7,6 +7,7 @@ var user_name = ""
 var user_email = ""
 var user_phone = ""
 var timer = true
+var start = false
 
 
 # Método para recibir parámetros
@@ -56,17 +57,19 @@ func _on_output_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/logout.tscn")
 
 func _on_timer_timeout() -> void:
-	if timer == true:
+	if timer == true and start == true:
 		$TextureProgressBar.value += 1
 		$LabelProgressBar.text = str($TextureProgressBar.value)
 		$Timer.start()
 
 func _on_pause_pressed() -> void:
-	if timer == true:
-		timer = false
-	else:
-		timer = true
-		$Timer.start()
+	if start == true:
+		if timer == true:
+			timer = false
+		else:
+			timer = true
+			$Timer.start()
 
 func _on_start_pressed() -> void:
+	start = true
 	$Timer.start()

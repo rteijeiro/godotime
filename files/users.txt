@@ -227,6 +227,12 @@
 		"password": "santi",
 		"phone": "456789123"
 	},
+	"sdffsd": {
+		"full_name": "dsfdsfds",
+		"hours": "08:00 - 14:00",
+		"password": "sdfsdfdf",
+		"phone": "dsfdsfsd"
+	},
 	"sdfgdfgfdg": {
 		"full_name": "fdgdfgdfg",
 		"hours": "08:00 - 14:00",
