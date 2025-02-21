@@ -3,10 +3,16 @@ extends Control
 @onready var name_label = $User_panel/Margin/Box/Name
 @onready var email_label = $User_panel/Margin/Box/Email
 @onready var phone_label = $User_panel/Margin/Box/Number
+@onready var horaInicio = $Shift_panel/Margin/Box/HBoxContainer/HoraInicio
+@onready var horaFin = $Shift_panel/Margin/Box/HBoxContainer/HoraFin
 
 var user_name = ""
 var user_email = ""
 var user_phone = ""
+var inicio = 0
+var inicioMinutos = 0
+var fin = 0
+var finMinutos = 0
 
 func set_data(name: String, email: String, phone: String):
 	user_name = name
@@ -17,6 +23,8 @@ func _ready():
 	name_label.text = user_name
 	email_label.text = user_email
 	phone_label.text = user_phone
+	horaInicio.text = str(inicio) + ":" + str(inicioMinutos)
+	horaFin.text = str(fin) + ":" + str(finMinutos)
 
 func _on_account_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/profile.tscn")

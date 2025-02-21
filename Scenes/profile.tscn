@@ -248,6 +248,31 @@ offset_top = -4.0
 grow_horizontal = 2
 grow_vertical = 0
 
+[node name="HBoxContainer" type="HBoxContainer" parent="Shift_panel/Margin/Box"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="De" type="Label" parent="Shift_panel/Margin/Box/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_akp77")
+text = "DE"
+
+[node name="HoraInicio" type="Label" parent="Shift_panel/Margin/Box/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_akp77")
+text = "0"
+
+[node name="Hasta" type="Label" parent="Shift_panel/Margin/Box/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_akp77")
+text = "Hasta"
+
+[node name="HoraFin" type="Label" parent="Shift_panel/Margin/Box/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_akp77")
+text = "0"
+
 [node name="Accept" type="Button" parent="Shift_panel/Margin/Box"]
 layout_mode = 2
 size_flags_horizontal = 4
