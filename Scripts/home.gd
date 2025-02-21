@@ -25,7 +25,6 @@ func _on_account_pressed() -> void:
 	var profile_scene = load("res://Scenes/profile.tscn").instantiate()
 	profile_scene.set_data(user_name, user_email, user_phone)  # Pasamos parámetros a Home
 	get_tree().root.add_child(profile_scene)  # Agregar la escena al árbol
-	
 
 # Funcion para obtener la fecha a tiempo real
 # Diccionario para traducir los meses al español
@@ -40,12 +39,13 @@ func update_date():
 	var day = date["day"]
 	var month = month_names[date["month"]]  # Convertimos el número a nombre de mes
 	var year = date["year"]
-
 	var formatted_date = "%d %s %d" % [day, month, year]
 	date_label.text = formatted_date  # Mostramos la fecha en el botón
 
 func _on_home_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/home.tscn")
+	var home_scene = load("res://Scenes/home.tscn").instantiate()
+	home_scene.set_data(user_name, user_email, user_phone)
+	get_tree().root.add_child(home_scene)
 
 func _on_finish_pressed() -> void:
 	timer = false
@@ -57,9 +57,9 @@ func _on_output_pressed() -> void:
 
 func _on_timer_timeout() -> void:
 	if timer == true:
-		$Timer.start()
 		$TextureProgressBar.value += 1
 		$LabelProgressBar.text = str($TextureProgressBar.value)
+		$Timer.start()
 
 func _on_pause_pressed() -> void:
 	if timer == true:
@@ -67,3 +67,6 @@ func _on_pause_pressed() -> void:
 	else:
 		timer = true
 		$Timer.start()
+
+func _on_start_pressed() -> void:
+	$Timer.start()

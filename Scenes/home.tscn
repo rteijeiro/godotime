@@ -300,8 +300,8 @@ flat = true
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
-autostart = true
 
+[connection signal="pressed" from="PanelContainer1/MarginContainer/VBoxContainer/HBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="PanelContainer1/MarginContainer/VBoxContainer/HBoxContainer/Finish" to="." method="_on_finish_pressed"]
 [connection signal="pressed" from="PanelContainer1/MarginContainer/VBoxContainer/Pause" to="." method="_on_pause_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Account" to="." method="_on_account_pressed"]

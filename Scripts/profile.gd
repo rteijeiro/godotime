@@ -18,7 +18,7 @@ func set_data(name: String, email: String, phone: String):
 	user_name = name
 	user_email = email
 	user_phone = phone
-	
+
 func _ready():
 	name_label.text = user_name
 	email_label.text = user_email
@@ -27,7 +27,9 @@ func _ready():
 	horaFin.text = str(fin) + ":" + str(finMinutos)
 
 func _on_account_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/profile.tscn")
+	var profile_scene = load("res://Scenes/profile.tscn").instantiate()
+	profile_scene.set_data(user_name, user_email, user_phone)
+	get_tree().root.add_child(profile_scene)
 
 func _on_home_pressed() -> void:
 	var home_scene = load("res://Scenes/home.tscn").instantiate()
