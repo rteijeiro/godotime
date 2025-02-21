@@ -54,6 +54,6 @@ func _on_output_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/logout.tscn")
 
 func _on_timer_timeout() -> void:
-	$ProgressBar.value += 1
-	$Progress.text = str($ProgressBar.value)
+	$TextureProgressBar.value += 1
+	$LabelProgressBar.text = str($TextureProgressBar.value)
 	$Timer.start()

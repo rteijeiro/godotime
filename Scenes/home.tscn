@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cs7iafkhed4pt"]
+[gd_scene load_steps=20 format=3 uid="uid://o3nqunngc5sc"]
 
 [ext_resource type="Script" path="res://Scripts/home.gd" id="1_8q3f2"]
 [ext_resource type="Texture2D" uid="uid://dgt146hw0hx73" path="res://Images/top_home.png" id="2_wkk61"]
@@ -8,7 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://ckqsahj308dk1" path="res://Images/blue_button.png" id="6_iy4d0"]
 [ext_resource type="Texture2D" uid="uid://cap57alllf614" path="res://Images/green_button.png" id="7_l7cyg"]
 [ext_resource type="Theme" uid="uid://cqppled3h7rd2" path="res://resources/defaultTheme.tres" id="8_4xr2r"]
-[ext_resource type="Texture2D" uid="uid://bud16l8aafdmu" path="res://Images/circular-determinateprogressindicator.png" id="8_vvm3o"]
+[ext_resource type="Texture2D" uid="uid://qrlo8nsyis25" path="res://Images/07.png" id="8_llvis"]
+[ext_resource type="Theme" uid="uid://crdpgsyupauh0" path="res://resources/progressLabel.tres" id="9_7t724"]
 [ext_resource type="Theme" uid="uid://003bascnugva" path="res://resources/buttonPause.tres" id="9_nw6n7"]
 [ext_resource type="Texture2D" uid="uid://bmjpqcvuf85p4" path="res://Images/pause.png" id="10_pjrwj"]
 [ext_resource type="Texture2D" uid="uid://dtk0cce46is38" path="res://Images/account_circle.png" id="11_xqe6v"]
@@ -22,12 +23,16 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_flxvo"]
+atlas = ExtResource("8_llvis")
+region = Rect2(0, 0, 16, 16)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2rc41"]
 bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="Theme" id="Theme_h51c8"]
 
-[node name="Home2" type="Control"]
+[node name="Home" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -149,13 +154,36 @@ icon = ExtResource("7_l7cyg")
 flat = true
 icon_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
 layout_mode = 0
-offset_left = 92.0
-offset_top = 382.0
-offset_right = 322.0
-offset_bottom = 612.0
-texture = ExtResource("8_vvm3o")
+offset_left = 126.0
+offset_top = 404.0
+offset_right = 142.0
+offset_bottom = 420.0
+scale = Vector2(10, 10)
+fill_mode = 4
+texture_progress = SubResource("AtlasTexture_flxvo")
+
+[node name="LabelProgressBar" type="Label" parent="."]
+layout_direction = 3
+layout_mode = 0
+offset_left = 188.0
+offset_top = 584.0
+offset_right = 228.0
+offset_bottom = 658.0
+theme = ExtResource("9_7t724")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Percent" type="Label" parent="."]
+layout_mode = 0
+offset_left = 226.0
+offset_top = 584.0
+offset_right = 286.0
+offset_bottom = 658.0
+theme = ExtResource("9_7t724")
+text = "%"
 
 [node name="PanelContainer1" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -271,7 +299,12 @@ size_flags_vertical = 4
 icon = ExtResource("13_7pjgl")
 flat = true
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
 [connection signal="pressed" from="PanelContainer1/MarginContainer/VBoxContainer/HBoxContainer/Finish" to="." method="_on_finish_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Account" to="." method="_on_account_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Output" to="." method="_on_output_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
