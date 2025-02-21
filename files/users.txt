@@ -1,4 +1,10 @@
 {
+	"TonyKroos@gmail.com": {
+		"full_name": "TonyKroos",
+		"hours": "08:00 - 14:00",
+		"password": "HalaMadrid",
+		"phone": "633"
+	},
 	"adrian@gmail.com": {
 		"full_name": "Adrian romero garcía",
 		"hours": "08:00 - 14:00",

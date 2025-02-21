@@ -6,47 +6,44 @@ extends Control
 @onready var password_input = $Password
 @onready var register_button = $Login
 
-
 var user_manager = UserManager.new()
 var full_name: String
 
 func _ready():
-	# Depuración para ver si encuentra el botón
-	print("Nodo Register encontrado:", register_button)
+	# Debugging to check if the register button is found
+	print("Register button found:", register_button)
 	
-	if register_button:  # Evita el error si el botón es null
+	if register_button:  # Avoids errors if the button is null
 		register_button.pressed.connect(_on_register_pressed)
 	else:
-		print("⚠️ ERROR: No se encontró el botón Register. Verifica su nombre y estructura en la escena.")
+		print("⚠️ ERROR: Register button not found. Check its name and scene structure.")
 
-# Función para registrar al usuario
+# Function to register the user
 func _on_register_pressed():
 	var email = email_input.text.strip_edges()
 	full_name = full_name_input.text.strip_edges()
 	var phone = phone_input.text.strip_edges()
 	var password = password_input.text.strip_edges()
 	
-	# Validar que los campos no estén vacíos
+	# Validate that fields are not empty
 	if email.is_empty() or full_name.is_empty() or phone.is_empty() or password.is_empty():
-		print("Todos los campos son obligatorios")
+		print("All fields are mandatory")
 		return
 	
-	# Crear usuario con horario por defecto
+	# Create user with default schedule
 	var new_user = User.new(email, full_name, phone, password, "08:00 - 14:00")
 	
-	# Intentar guardar el usuario
+	# Attempt to save the user
 	var success = user_manager.save_user(new_user)
 	
 	if success:
-		print("Usuario registrado con éxito")
+		print("User successfully registered")
 		var home_scene = load("res://Scenes/home.tscn").instantiate()
-		home_scene.set_data(full_name, email, phone)  # Pasamos parámetros
-		get_tree().root.add_child(home_scene)  # Agregar la escena al árbol
-		get_tree().current_scene.queue_free()  # Opcional: Cerrar la escena actual
-
+		home_scene.set_data(full_name, email, phone)  # Passing parameters
+		get_tree().root.add_child(home_scene)  # Add the scene to the tree
+		get_tree().current_scene.queue_free()  # Optional: Close the current scene
 	else:
-		print("El correo ya esta registrado")
-
+		print("Email is already registered")
 
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/start.tscn")

@@ -14,11 +14,13 @@ var inicioMinutos = 0
 var fin = 0
 var finMinutos = 0
 
+# Method to receive user data
 func set_data(name: String, email: String, phone: String):
 	user_name = name
 	user_email = email
 	user_phone = phone
 	
+# When the scene is ready, update the text fields
 func _ready():
 	name_label.text = user_name
 	email_label.text = user_email
@@ -31,12 +33,11 @@ func _on_account_pressed() -> void:
 
 func _on_home_pressed() -> void:
 	var home_scene = load("res://Scenes/Home.tscn").instantiate()
-	home_scene.set_data(user_name, user_email, user_phone)  # Pasamos parámetros
-	get_tree().root.add_child(home_scene)  # Agregar la escena al árbol
+	home_scene.set_data(user_name, user_email, user_phone)  # Pass parameters
+	get_tree().root.add_child(home_scene)  # Add the scene to the tree
 
 func _on_output_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/logout.tscn")
-
 
 func _on_accept_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Home.tscn")

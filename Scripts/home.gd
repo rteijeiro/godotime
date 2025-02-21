@@ -1,6 +1,6 @@
 extends Control
 
-@onready var name_label = $Top/MarginContainer/Name  # Ruta al Label
+@onready var name_label = $Top/MarginContainer/Name  # Path to the Label
 @onready var date_label = $Panel/HBoxContainer/Date
 
 var user_name = ""
@@ -8,48 +8,46 @@ var user_email = ""
 var user_phone = ""
 var timer = true
 
-# Método para recibir parámetros
+# Method to receive parameters
 func set_data(name: String, email: String, phone: String):
 	user_name = name
 	user_email = email
 	user_phone = phone
 
-# Cuando la escena esté lista, actualizar los textos
+# When the scene is ready, update the text fields
 func _ready():
 	if user_name:
-		name_label.text = "Bienvenido,  " + user_name
+		name_label.text = "Welcome, " + user_name
 	update_date()
 
 func _on_account_pressed() -> void:
 	var profile_scene = load("res://Scenes/profile.tscn").instantiate()
-	profile_scene.set_data(user_name, user_email, user_phone)  # Pasamos parámetros a Home
-	get_tree().root.add_child(profile_scene)  # Agregar la escena al árbol
+	profile_scene.set_data(user_name, user_email, user_phone)  # Pass parameters to Home
+	get_tree().root.add_child(profile_scene)  # Add the scene to the tree
 	
 
-# Funcion para obtener la fecha a tiempo real
-# Diccionario para traducir los meses al español
+# Function to get the real-time date
+# Dictionary to translate month numbers to names in Spanish
 var month_names = {
-	1: "enero", 2: "febrero", 3: "marzo", 4: "abril",
-	5: "mayo", 6: "junio", 7: "julio", 8: "agosto",
-	9: "septiembre", 10: "octubre", 11: "noviembre", 12: "diciembre"
+	1: "January", 2: "February", 3: "March", 4: "April",
+	5: "May", 6: "June", 7: "July", 8: "August",
+	9: "September", 10: "October", 11: "November", 12: "December"
 }
 
 func update_date():
 	var date = Time.get_datetime_dict_from_system()
 	var day = date["day"]
-	var month = month_names[date["month"]]  # Convertimos el número a nombre de mes
+	var month = month_names[date["month"]]  # Convert number to month name
 	var year = date["year"]
 
 	var formatted_date = "%d %s %d" % [day, month, year]
-	date_label.text = formatted_date  # Mostramos la fecha en el botón
+	date_label.text = formatted_date  # Display the date in the label
 
 func _on_home_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Home.tscn")
 
-
 func _on_finish_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/logout.tscn")
-
 
 func _on_output_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/logout.tscn")
