@@ -13,7 +13,7 @@ var full_name: String
 func _ready():
 	# Depuración para ver si encuentra el botón
 	print("Nodo Register encontrado:", register_button)
-
+	
 	if register_button:  # Evita el error si el botón es null
 		register_button.pressed.connect(_on_register_pressed)
 	else:
@@ -30,7 +30,7 @@ func _on_register_pressed():
 	if email.is_empty() or full_name.is_empty() or phone.is_empty() or password.is_empty():
 		print("Todos los campos son obligatorios")
 		return
-
+	
 	# Crear usuario con horario por defecto
 	var new_user = User.new(email, full_name, phone, password, "08:00 - 14:00")
 	
@@ -39,11 +39,14 @@ func _on_register_pressed():
 	
 	if success:
 		print("Usuario registrado con éxito")
-		var home_scene = load("res://Scenes/Home.tscn").instantiate()
+		var home_scene = load("res://Scenes/home.tscn").instantiate()
 		home_scene.set_data(full_name, email, phone)  # Pasamos parámetros
 		get_tree().root.add_child(home_scene)  # Agregar la escena al árbol
 		get_tree().current_scene.queue_free()  # Opcional: Cerrar la escena actual
 
 	else:
 		print("El correo ya esta registrado")
-		
+
+
+func _on_back_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/start.tscn")

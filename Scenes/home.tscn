@@ -233,7 +233,7 @@ text = "Terminar"
 flat = true
 icon_alignment = 1
 
-[node name="Button" type="Button" parent="PanelContainer1/MarginContainer/VBoxContainer"]
+[node name="Pause" type="Button" parent="PanelContainer1/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -241,7 +241,7 @@ theme = ExtResource("9_nw6n7")
 flat = true
 icon_alignment = 1
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer1/MarginContainer/VBoxContainer/Button"]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer1/MarginContainer/VBoxContainer/Pause"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -301,9 +301,11 @@ flat = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
+one_shot = true
 autostart = true
 
 [connection signal="pressed" from="PanelContainer1/MarginContainer/VBoxContainer/HBoxContainer/Finish" to="." method="_on_finish_pressed"]
+[connection signal="pressed" from="PanelContainer1/MarginContainer/VBoxContainer/Pause" to="." method="_on_pause_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Account" to="." method="_on_account_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Home" to="." method="_on_home_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/HBoxContainer/Output" to="." method="_on_output_pressed"]
