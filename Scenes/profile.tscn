@@ -142,29 +142,10 @@ theme = ExtResource("5_akp77")
 theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
 theme_override_fonts/font = ExtResource("8_jl6oe")
 theme_override_font_sizes/font_size = 16
-text = "Antonio Jesús"
+text = "Santiago Sainz Gomez"
 horizontal_alignment = 1
 
 [node name="HSeparator" type="HSeparator" parent="User_panel/Margin/Box/Name"]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -4.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="Surname" type="Label" parent="User_panel/Margin/Box"]
-layout_mode = 2
-theme = ExtResource("5_akp77")
-theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
-theme_override_fonts/font = ExtResource("8_jl6oe")
-theme_override_font_sizes/font_size = 16
-text = "Sánchez Rosales"
-horizontal_alignment = 1
-
-[node name="HSeparator" type="HSeparator" parent="User_panel/Margin/Box/Surname"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -180,7 +161,7 @@ theme = ExtResource("5_akp77")
 theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
 theme_override_fonts/font = ExtResource("8_jl6oe")
 theme_override_font_sizes/font_size = 16
-text = "correoelectronico@gmail.com"
+text = "santisainzuk@gmail.com"
 horizontal_alignment = 1
 
 [node name="HSeparator" type="HSeparator" parent="User_panel/Margin/Box/Email"]
@@ -199,7 +180,7 @@ theme = ExtResource("5_akp77")
 theme_override_colors/font_color = Color(0.188235, 0.188235, 0.188235, 1)
 theme_override_fonts/font = ExtResource("8_jl6oe")
 theme_override_font_sizes/font_size = 16
-text = "9887412335"
+text = "633651663"
 horizontal_alignment = 1
 
 [node name="Shift_panel" type="PanelContainer" parent="."]
@@ -253,24 +234,34 @@ layout_mode = 2
 theme_override_constants/separation = 10
 alignment = 1
 
-[node name="De" type="Label" parent="Shift_panel/Margin/Box/HBoxContainer"]
+[node name="From" type="Label" parent="Shift_panel/Margin/Box/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("5_akp77")
+theme_override_colors/font_color = Color(0, 1, 0.482353, 1)
+theme_override_fonts/font = ExtResource("8_jl6oe")
+theme_override_font_sizes/font_size = 14
 text = "DE"
 
-[node name="HoraInicio" type="Label" parent="Shift_panel/Margin/Box/HBoxContainer"]
+[node name="Start_time" type="Label" parent="Shift_panel/Margin/Box/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("5_akp77")
+theme_override_fonts/font = ExtResource("8_jl6oe")
+theme_override_font_sizes/font_size = 20
 text = "0"
 
-[node name="Hasta" type="Label" parent="Shift_panel/Margin/Box/HBoxContainer"]
+[node name="To" type="Label" parent="Shift_panel/Margin/Box/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("5_akp77")
-text = "Hasta"
+theme_override_colors/font_color = Color(0, 0.882353, 0.482353, 1)
+theme_override_fonts/font = ExtResource("8_jl6oe")
+theme_override_font_sizes/font_size = 14
+text = "HASTA"
 
-[node name="HoraFin" type="Label" parent="Shift_panel/Margin/Box/HBoxContainer"]
+[node name="End_time" type="Label" parent="Shift_panel/Margin/Box/HBoxContainer"]
 layout_mode = 2
 theme = ExtResource("5_akp77")
+theme_override_fonts/font = ExtResource("8_jl6oe")
+theme_override_font_sizes/font_size = 20
 text = "0"
 
 [node name="Accept" type="Button" parent="Shift_panel/Margin/Box"]

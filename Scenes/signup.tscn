@@ -14,7 +14,7 @@ bg_color = Color(0, 0, 0, 0)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y453a"]
 bg_color = Color(0, 0, 0, 0)
 
-[node name="Signup2" type="Control"]
+[node name="Signup" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
