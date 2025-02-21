@@ -258,18 +258,16 @@ texture = ExtResource("10_pjrwj")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.00121065
-anchor_top = 0.917411
-anchor_right = 0.995131
-anchor_bottom = 0.999302
-offset_right = 1.5108
-offset_bottom = 0.62561
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -73.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.996333, 0.991546)
 theme_override_styles/panel = SubResource("StyleBoxFlat_2rc41")
-metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
 layout_mode = 2

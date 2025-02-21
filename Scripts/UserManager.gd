@@ -1,10 +1,9 @@
 class_name UserManager
-
 extends Node
 
 const FILE_PATH = "res://files/users.txt"
 
-# Cargar todos los usuarios desde el JSON
+# Load all users from the JSON file
 func load_users():
 	if not FileAccess.file_exists(FILE_PATH):
 		return {}
@@ -19,19 +18,21 @@ func load_users():
 	var data = JSON.parse_string(content)
 	return data if data is Dictionary else {} 
 
-# Guardar usuarios en el JSON
+# Save users to the JSON file
 func save_users(users: Dictionary):
 	var file = FileAccess.open(FILE_PATH, FileAccess.WRITE)
 	file.store_string(JSON.stringify(users, "\t"))
 	file.close()
 
-# Guardar un nuevo usuario
+# Save a new user
 func save_user(user):
 	var users = load_users()
 	
+	# Check if the email is already registered
 	if user.email in users:
 		return false
 	
+	# Store user data
 	users[user.email] = {
 		"full_name": user.full_name,
 		"phone": user.phone,
@@ -42,7 +43,7 @@ func save_user(user):
 	save_users(users)
 	return true
 
-# Buscar usuario por email
+# Find a user by email
 func find_user(email):
 	var users = load_users()
 	

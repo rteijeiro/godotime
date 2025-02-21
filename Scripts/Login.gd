@@ -7,49 +7,48 @@ extends Control
 var user_manager = UserManager.new()
 
 func _ready():
-	# Depuración para ver si encuentra el botón
-	print("Nodo Login encontrado:", login_button)
+	# Debugging to check if the login button is found
+	print("Login button found:", login_button)
 
-	if login_button:  # Evita el error si el botón es null
+	if login_button:  # Avoids errors if the button is null
 		login_button.pressed.connect(_on_login_pressed)
 	else:
-		print("⚠️ ERROR: No se encontró el botón Login. Verifica su nombre y estructura en la escena.")
+		print("⚠️ ERROR: Login button not found. Check its name and scene structure.")
 
 func _on_login_pressed() -> void:
 	var email = email_input.text.strip_edges()
 	var password = password_input.text.strip_edges()
 
-	# Validar que los campos no estén vacíos
+	# Validate that fields are not empty
 	if email.is_empty() or password.is_empty():
-		print("Debe completar todos los campos")
+		print("All fields must be completed")
 		return
 
-	# Buscar usuario en la base de datos
+	# Search for the user in the database
 	var user_data = user_manager.find_user(email)
 
 	if user_data == null:
-		print("El usuario no existe")
+		print("User does not exist")
 		return
 
-	# Verificar contraseña
+	# Verify password
 	if user_data["password"] != password:
-		print("Contraseña incorrecta")
+		print("Incorrect password")
 		return
 
-	# Login exitoso, obtener datos del usuario
+	# Successful login, retrieve user data
 	var full_name = user_data["full_name"]
 	var user_email = user_data["email"]
 	var user_phone = user_data["phone"]
 	# var schedule = user_data["schedule"]
 
-	print("Usuario autenticado:", full_name)
+	print("User authenticated:", full_name)
 
-	# Cargar la escena Home y pasar los datos del usuario
+	# Load the Home scene and pass user data
 	var home_scene = load("res://Scenes/home.tscn").instantiate()
-	home_scene.set_data(full_name, user_email, user_phone)  # Pasamos parámetros a Home
-	get_tree().root.add_child(home_scene)  # Agregar la escena al árbol
-	get_tree().current_scene.queue_free()  # Cerrar la escena actual
-
+	home_scene.set_data(full_name, user_email, user_phone)  # Passing parameters to Home
+	get_tree().root.add_child(home_scene)  # Add the scene to the tree
+	get_tree().current_scene.queue_free()  # Close the current scene
 
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/start.tscn")
